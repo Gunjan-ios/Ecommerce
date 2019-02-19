@@ -5,18 +5,21 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - SVProgressHUD (2.2.5)
+  - TextFieldEffects (1.5.0)
 
 DEPENDENCIES:
   - Alamofire
   - LIHAlert
   - SDWebImage
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - LIHAlert
     - SDWebImage
+    - TextFieldEffects
 
 EXTERNAL SOURCES:
   SVProgressHUD:
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   LIHAlert: a027605673986d03b896e4f4a901f393b15840b9
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TextFieldEffects: bf9e9cac7cb1a97d632fbcd0724bb6347dd86633
 
-PODFILE CHECKSUM: 08056c2a5f0f34e4d6b75e85123ab0629d372102
+PODFILE CHECKSUM: eb60aa26ad26f912eaa3df3b709f148c30422ecc
 
 COCOAPODS: 1.5.3

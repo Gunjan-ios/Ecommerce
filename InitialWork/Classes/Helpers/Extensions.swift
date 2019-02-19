@@ -152,7 +152,11 @@ extension UIImage
         return copied!
     }
     func jpeg(_ quality: JPEGQuality) -> Data? {
-        return UIImageJPEGRepresentation(self, quality.rawValue)
+        
+        return self.jpegData(compressionQuality: quality.rawValue)
+
+//        return UIImageJPEGRepresentation(self, quality.rawValue)
+        
 //        return UIImagePNGRepresentation(self)
         
     }

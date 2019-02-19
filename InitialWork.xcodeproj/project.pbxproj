@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
+		2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */; };
+		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0B221BEBC200242F2D /* Assets.xcassets */; };
 		2EB07D16221BEBC200242F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0C221BEBC200242F2D /* LaunchScreen.storyboard */; };
 		2EB07D17221BEBC200242F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0E221BEBC200242F2D /* Main.storyboard */; };
 		2EB07D18221BEBC200242F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D11221BEBC200242F2D /* AppDelegate.swift */; };
-		2EB07D1A221BEBC200242F2D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D14221BEBC200242F2D /* Info.plist */; };
 		2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D1E221BEC6D00242F2D /* AlertManager.swift */; };
 		2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D20221BEC6D00242F2D /* Hud.swift */; };
-		2EB07D35221BEC6D00242F2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D22221BEC6D00242F2D /* ViewController.swift */; };
 		2EB07D36221BEC6D00242F2D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D25221BEC6D00242F2D /* Strings.swift */; };
 		2EB07D37221BEC6D00242F2D /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D26221BEC6D00242F2D /* Consts.swift */; };
 		2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D27221BEC6D00242F2D /* Enums.swift */; };
@@ -56,14 +56,14 @@
 		2E571C47221BE63000CC7394 /* InitialWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkUITests.swift; sourceTree = "<group>"; };
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EB07D0B221BEBC200242F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EB07D0D221BEBC200242F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EB07D0F221BEBC200242F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EB07D11221BEBC200242F2D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EB07D14221BEBC200242F2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB07D1E221BEC6D00242F2D /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		2EB07D20221BEC6D00242F2D /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
-		2EB07D22221BEC6D00242F2D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2EB07D25221BEC6D00242F2D /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2EB07D26221BEC6D00242F2D /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		2EB07D27221BEC6D00242F2D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 		2EB07D2F221BEC6D00242F2D /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		2EB07D30221BEC6D00242F2D /* ApiCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCommunicator.swift; sourceTree = "<group>"; };
 		2EB07D32221BEC6D00242F2D /* Gasstation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gasstation.swift; sourceTree = "<group>"; };
+		2EB07D41221C15BF00242F2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InitialWork/Info.plist; sourceTree = SOURCE_ROOT; };
 		B62D4C2C63A3B8A25F781AB7 /* Pods-InitialWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FA7A177697FE46A313AB33 /* Pods-InitialWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.release.xcconfig"; sourceTree = "<group>"; };
 		D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InitialWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +152,7 @@
 			children = (
 				2EB07D1B221BEC6D00242F2D /* Classes */,
 				2EB07D0A221BEBC200242F2D /* View */,
-				2EB07D14221BEBC200242F2D /* Info.plist */,
+				2EB07D41221C15BF00242F2D /* Info.plist */,
 			);
 			path = InitialWork;
 			sourceTree = "<group>";
@@ -216,7 +217,8 @@
 		2EB07D21221BEC6D00242F2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2EB07D22221BEC6D00242F2D /* ViewController.swift */,
+				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
+				2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,7 +394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EB07D1A221BEBC200242F2D /* Info.plist in Resources */,
 				2EB07D17221BEBC200242F2D /* Main.storyboard in Resources */,
 				2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */,
 				2EB07D16221BEBC200242F2D /* LaunchScreen.storyboard in Resources */,
@@ -429,6 +430,7 @@
 				"${BUILT_PRODUCTS_DIR}/LIHAlert/LIHAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -438,6 +440,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LIHAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,10 +486,11 @@
 				2EB07D40221BEC6D00242F2D /* Gasstation.swift in Sources */,
 				2EB07D18221BEBC200242F2D /* AppDelegate.swift in Sources */,
 				2EB07D3B221BEC6D00242F2D /* Extensions.swift in Sources */,
+				2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */,
 				2EB07D3E221BEC6D00242F2D /* ApiManager.swift in Sources */,
 				2EB07D36221BEC6D00242F2D /* Strings.swift in Sources */,
 				2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */,
-				2EB07D35221BEC6D00242F2D /* ViewController.swift in Sources */,
+				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
 				2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -648,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -666,6 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
 				INFOPLIST_FILE = InitialWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,6 +690,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
 				INFOPLIST_FILE = InitialWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

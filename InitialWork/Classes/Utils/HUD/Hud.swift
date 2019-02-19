@@ -16,7 +16,7 @@ class Hud {
     
     static func config() {
         SVProgressHUD.setHapticsEnabled(true)
-        SVProgressHUD.setMaxSupportedWindowLevel(UIWindowLevelStatusBar)
+        SVProgressHUD.setMaxSupportedWindowLevel(UIWindow.Level.statusBar)
         SVProgressHUD.setMinimumDismissTimeInterval(2)
     }
     
@@ -36,7 +36,7 @@ class Hud {
         if !self.isShowing {
             self.isShowing = true
             UIApplication.shared.beginIgnoringInteractionEvents()
-   SVProgressHUD.setBackgroundColor(UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.9))
+            SVProgressHUD.setBackgroundColor(UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.9))
             SVProgressHUD.setForegroundColor(UIColor.white)
             SVProgressHUD.setFont(UIFont .boldSystemFont(ofSize: 14))
             SVProgressHUD.show(withStatus: message)
