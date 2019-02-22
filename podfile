@@ -9,5 +9,6 @@ target 'InitialWork' do
 	pod 'SDWebImage'
        	pod 'LIHAlert'
         pod 'TextFieldEffects'
+        pod 'IQKeyboardManagerSwift'
 
   end

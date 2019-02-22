@@ -14,20 +14,26 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
     // ----------------------------------------------------------
     // MARK: IB Outlets
     // ----------------------------------------------------------
+   
     @IBOutlet weak var txt_User: MadokaTextField!
     @IBOutlet weak var txt_Password: MadokaTextField!
     @IBOutlet weak var btn_Login: UIButton!
+    @IBOutlet weak var btn_check: UIButton!
     
+
     // ----------------------------------------------------------
     //MARK:- Viewload
     // ----------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.btn_Login.layer.cornerRadius = self.btn_Login.frame.size.height/2
         
         txt_User.delegate = self
         txt_Password.delegate = self
+        
         MadokaTextField.appearance().tintColor = .red
+        
 
 //        txt_User .becomeFirstResponder()
         // Do any additional setup after loading the view.
@@ -50,7 +56,11 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
             self.showAlert(message: Strings.Login.invalidpasswrod, type: AlertType.error, navBar: true)
             return false
         }
-        
+        if btn_check.isSelected != true
+        {
+            self.showAlert(message: Strings.Login.Terms, type: AlertType.error, navBar: true)
+        }
+    
         return true
     }
     
@@ -60,19 +70,23 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
 
     @IBAction func OnSubmitPressed(_ sender: Any)
     {
-                Hud.show(message: "Please Wait...")
+        Hud.show(message: "Please Wait...")
         
         if validateFields()
         {
 //            self.performSegue(withIdentifier: "LogintoHome", sender: self)
+            
         }
-        else
-        {
-            self.showAlert(message: Strings.Login.invalidcredentials, type: AlertType.error, navBar: true)
-        }
-                Hud.dismiss()
-        
+    
+        Hud.dismiss()
+
     }
+    
+    @IBAction func OnTCPressed(_ sender: UIButton) {
+
+        btn_check.isSelected = !btn_check.isSelected
+    }
+    
     // ----------------------------------------------------------
     //MARK:- TextField Method
     // ----------------------------------------------------------

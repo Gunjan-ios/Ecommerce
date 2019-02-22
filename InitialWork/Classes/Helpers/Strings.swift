@@ -24,8 +24,11 @@ class Strings {
     }
     class Login {
         static let invalidName = "Please enter a valid name."
+        static let invalidEmail = "Please enter a valid Email."
         static let invalidpasswrod = "Please enter a valid password."
+        static let ConfrimPasswrod = "Do not match password"
         static let invalidcredentials = "Please enter a valid login credentials."
+        static let Terms = "Please Select Term & Condition."
     
         
     }

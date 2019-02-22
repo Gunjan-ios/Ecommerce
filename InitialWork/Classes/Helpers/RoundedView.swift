@@ -17,3 +17,13 @@ class RoundedView: UIView {
     }
     
 }
+class ThemeColorButton: UIButton {
+    
+    override func awakeFromNib() {
+//        layer.cornerRadius = frame.size.height/2
+//        layer.borderColor = UIColor.black.cgColor
+//        layer.borderWidth = 1
+        setTitleColor(THEME_COLOR, for: .normal)
+    }
+    
+}

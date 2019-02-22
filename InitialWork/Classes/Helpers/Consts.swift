@@ -14,7 +14,7 @@ import CoreLocation
 
 let SUCCESS_COLOR = UIColor(red: 0/255, green: 132/255, blue: 83/255, alpha: 0.85)
 let ERROR_COLOR = UIColor(red: 200/255, green: 1/255, blue: 2/255, alpha: 0.85)
-let THEME_COLOR = UIColor (red: 172/255, green: 38/255, blue: 255/255, alpha: 1)
+let THEME_COLOR = UIColor (red: 210/255, green: 21/255, blue: 125/255, alpha: 1)
 //    UIColor(red: 0/255, green: 185/255, blue:64/255, alpha: 1)
 let PLACEHOLDER_COLOR = UIColor(red: 138/255, green: 207/255, blue:216/255, alpha: 1)
 let FORM_TEXT_COLOR = UIColor(red: 159/255, green: 159/255, blue: 159/255, alpha: 1)

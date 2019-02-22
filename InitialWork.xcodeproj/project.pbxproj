@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */; };
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
 		2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		2E571C28221BE62F00CC7394 /* InitialWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitialWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C3C221BE63000CC7394 /* InitialWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C40221BE63000CC7394 /* InitialWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkTests.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		2EB07D30221BEC6D00242F2D /* ApiCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCommunicator.swift; sourceTree = "<group>"; };
 		2EB07D32221BEC6D00242F2D /* Gasstation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gasstation.swift; sourceTree = "<group>"; };
 		2EB07D41221C15BF00242F2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InitialWork/Info.plist; sourceTree = SOURCE_ROOT; };
+		2EC2766A2220327600148E71 /* InitialWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InitialWork.entitlements; sourceTree = "<group>"; };
 		B62D4C2C63A3B8A25F781AB7 /* Pods-InitialWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FA7A177697FE46A313AB33 /* Pods-InitialWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.release.xcconfig"; sourceTree = "<group>"; };
 		D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InitialWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,7 @@
 		2EB07D09221BEBC200242F2D /* InitialWork */ = {
 			isa = PBXGroup;
 			children = (
+				2EC2766A2220327600148E71 /* InitialWork.entitlements */,
 				2EB07D1B221BEC6D00242F2D /* Classes */,
 				2EB07D0A221BEBC200242F2D /* View */,
 				2EB07D41221C15BF00242F2D /* Info.plist */,
@@ -219,6 +223,7 @@
 			children = (
 				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
 				2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */,
+				2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,6 +363,14 @@
 				TargetAttributes = {
 					2E571C27221BE62F00CC7394 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					2E571C3B221BE63000CC7394 = {
 						CreatedOnToolsVersion = 10.1;
@@ -427,6 +440,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LIHAlert/LIHAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -437,6 +451,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LIHAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -480,6 +495,7 @@
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
 				2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */,
 				2EB07D3F221BEC6D00242F2D /* ApiCommunicator.swift in Sources */,
+				2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */,
 				2EB07D3C221BEC6D00242F2D /* Validation.swift in Sources */,
 				2EB07D37221BEC6D00242F2D /* Consts.swift in Sources */,
 				2EB07D3A221BEC6D00242F2D /* UserData.swift in Sources */,

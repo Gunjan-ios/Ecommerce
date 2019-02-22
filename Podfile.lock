@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - IQKeyboardManagerSwift (6.1.1)
   - LIHAlert (2.1.1)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - LIHAlert
   - SDWebImage
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
@@ -17,6 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManagerSwift
     - LIHAlert
     - SDWebImage
     - TextFieldEffects
@@ -32,11 +35,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   LIHAlert: a027605673986d03b896e4f4a901f393b15840b9
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TextFieldEffects: bf9e9cac7cb1a97d632fbcd0724bb6347dd86633
 
-PODFILE CHECKSUM: eb60aa26ad26f912eaa3df3b709f148c30422ecc
+PODFILE CHECKSUM: e556e717c164da3ce95f4ff9356482dfbd5f2f92
 
 COCOAPODS: 1.5.3
