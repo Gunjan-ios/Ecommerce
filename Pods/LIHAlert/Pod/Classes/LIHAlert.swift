@@ -900,7 +900,7 @@ import UIKit
                 
             } else {
                 if self.touchBackgroundToDismiss {
-                    self.hideAlert(nil)
+//                    self.hideAlert(nil)
                 }
             }
         }

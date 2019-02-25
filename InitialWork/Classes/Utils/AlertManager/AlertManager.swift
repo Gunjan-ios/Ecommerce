@@ -23,18 +23,18 @@ class AlertManager: LIHAlertManager {
         alert.alertAlpha = 1.0
         alert.autoCloseTimeInterval = 2.0
         
-        if UIScreen.main.bounds.size.height == 812
+        if UIScreen.main.bounds.size.height == 812 || UIScreen.main.bounds.size.height == 896
         {
                     alert.alertHeight += 20
                     alert.paddingTop += 10
 
         }
-      if UIScreen.main.bounds.size.height == 896
-        {
-            alert.alertHeight += 30
-            alert.paddingTop += 15
-
-        }
+//      if UIScreen.main.bounds.size.height == 896
+//        {
+//            alert.alertHeight += 20
+//            alert.paddingTop += 10
+//
+//        }
 
         return alert
     }
@@ -50,5 +50,30 @@ class AlertManager: LIHAlertManager {
         alert.paddingTop += 10
         return alert
     }
+    
+    static func FetchErrorAlert() -> LIHAlert
+    {
+        let  alert = super.getProcessingAlert(message: Strings.Common.Internet)
+        alert.alertColor = errorColor
+        alert.alertAlpha = 1.0
+        alert.autoCloseTimeInterval = 2.0
+        alert.touchBackgroundToDismiss = true
+        alert.dimsBackground = true
+        if UIScreen.main.bounds.size.height == 812 || UIScreen.main.bounds.size.height == 896
+        {
+            alert.alertHeight += 20
+            alert.paddingTop += 10
+            
+        }
+//        if UIScreen.main.bounds.size.height == 896
+//        {
+//            alert.alertHeight += 25
+//            alert.paddingTop += 12.5
+//
+//        }
+        return alert
+    }
+    
+    
 }
 

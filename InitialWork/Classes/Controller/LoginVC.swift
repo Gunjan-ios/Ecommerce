@@ -33,7 +33,7 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
         txt_Password.delegate = self
         
         MadokaTextField.appearance().tintColor = .red
-        
+       
 
 //        txt_User .becomeFirstResponder()
         // Do any additional setup after loading the view.

@@ -56,7 +56,7 @@ import UIKit
         let processingAlert: LIHAlert = LIHAlert()
         processingAlert.alertType = LIHAlertType.textWithLoading
         processingAlert.contentText = message
-        processingAlert.alertColor = UIColor.gray
+        processingAlert.alertColor = UIColor(red: 102.0/255.0, green: 197.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         processingAlert.alertHeight = 50.0
         processingAlert.alertAlpha = 1.0
         processingAlert.autoCloseEnabled=false

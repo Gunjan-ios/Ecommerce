@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class RoundedView: UIView {
 
     override func awakeFromNib() {
@@ -27,3 +27,4 @@ class ThemeColorButton: UIButton {
     }
     
 }
+

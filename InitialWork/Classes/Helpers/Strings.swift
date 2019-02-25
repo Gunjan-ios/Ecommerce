@@ -10,7 +10,6 @@
 import Foundation
 
 class Strings {
-    
    
     class Common {
         static let waiting = "Please wait.."
@@ -18,9 +17,10 @@ class Strings {
         static let cameramessage = "Can't aceess camera in this device."
         static let Getdata = "Getting Data Successfully"
         static let pushdata = "Data saved."
+        static let Connected = "Internet connected."
         static let NoData = "Data not Found."
-
-
+        static let Internet = "Check your internet connection."
+        static let FetchData = "Fetching data..."
     }
     class Login {
         static let invalidName = "Please enter a valid name."
@@ -39,3 +39,4 @@ class Strings {
     
 
 }
+

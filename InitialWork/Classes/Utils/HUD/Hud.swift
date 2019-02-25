@@ -51,6 +51,10 @@ class Hud {
     
     static func showSuccess(message: String) {
         SVProgressHUD.showSuccess(withStatus: message)
+        UIApplication.shared.endIgnoringInteractionEvents()
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+        self.isShowing = false
+
     }
     
     static func showError(message: String) {
