@@ -8,7 +8,8 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-
+import KOLocalizedString
+import LanguageManager_iOS
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         open_count =  1
+        KOLocalizedCore.main.configure()
+        // 1. is enabel debug
+//        KOLocalizedCore.main.isEnabelDebug = true
+//        // 2. is is update from server
+//        KOLocalizedCore.main.isUpdateOutside = true
+//        // 3. Set url api
+//        KOLocalizedCore.main.url = "http://khimich.com.ua/api"
+        //if change build id to 2.0, will load v2.0 Localizable.plist from server
+        debugPrint(KOGetLanguageArray())
+        LanguageManager.shared.defaultLanguage = .en
 
         // Override point for customization after application launch.
         return true

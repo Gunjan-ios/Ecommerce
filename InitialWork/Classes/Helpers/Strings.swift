@@ -37,6 +37,7 @@ class Strings {
         static let locationDenied = "Access to location service is disabled."
     }
     
+    
 
 }
 

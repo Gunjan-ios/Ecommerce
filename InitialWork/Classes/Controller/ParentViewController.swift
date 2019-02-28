@@ -8,6 +8,7 @@
 
 import UIKit
 import LIHAlert
+import KOLocalizedString
 
 class ParentViewController: UIViewController{
    
@@ -19,6 +20,7 @@ class ParentViewController: UIViewController{
     var processingAlert: LIHAlert?
     var alertNoNavBar: LIHAlert?
     var APP = UIApplication.shared.delegate as! AppDelegate
+    var window: UIWindow?
 
     override func viewDidLoad()
     {
@@ -114,5 +116,31 @@ class ParentViewController: UIViewController{
         self.showDetailViewController(alert, sender: self)
     }
     
+    //––––––––––––––––––––––––––––––––––––––––
+    //MARK: - Actions -
+    //––––––––––––––––––––––––––––––––––––––––
+    /// Function for change localization
+   
+    func OnLanguagePressed() {
+        let alertController = UIAlertController(title: "Choose Language", message: nil, preferredStyle: .actionSheet)
+        
+        let EnglishAction = UIAlertAction(title: "English", style: .default) { action in
+            KOSetLanguage("en")
+        }
+        alertController.addAction(EnglishAction)
+        
+        let HindiAction = UIAlertAction(title: "Hindi", style: .default) { action in
+            KOSetLanguage("hi")
+        }
+        
+        alertController.addAction(HindiAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in }
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
+    }
 
+    
+    
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import KOLocalizedString
 
 class LoginVC: ParentViewController ,UITextFieldDelegate{
 
@@ -19,26 +20,79 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
     @IBOutlet weak var txt_Password: MadokaTextField!
     @IBOutlet weak var btn_Login: UIButton!
     @IBOutlet weak var btn_check: UIButton!
+    @IBOutlet weak var LNbutton: UIBarButtonItem!
+    @IBOutlet weak var termCondition: ThemeColorButton!
     
-
+    @IBOutlet weak var Forgotpassword: ThemeColorButton!
+    
+    @IBOutlet weak var btn_signup: ThemeColorButton!
     // ----------------------------------------------------------
     //MARK:- Viewload
     // ----------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.barTintColor = THEME_COLOR
         self.btn_Login.layer.cornerRadius = self.btn_Login.frame.size.height/2
-        
         txt_User.delegate = self
         txt_Password.delegate = self
-        
         MadokaTextField.appearance().tintColor = .red
-       
-
+        settings()
+        
+        
 //        txt_User .becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
+
+    //––––––––––––––––––––––––––––––––––––––––
+    //MARK: - Settings -
+    //––––––––––––––––––––––––––––––––––––––––
+    private func settings(){
+        self.localizedSettings()
+        self.registerNotifications()
+    }
+    //––––––––––––––––––––––––––––––––––––––––
+    //MARK: - Loclized Setting -
+    //––––––––––––––––––––––––––––––––––––––––
+    ///  Base settings localized  elements on area view controller
+    private func localizedSettings()
+    {
+        
+        self.title = KOLocalizedString(Language.Login.Login)
+        self.txt_User.placeholder = KOLocalizedString(Language.Login.UserName)
+        self.txt_Password.placeholder = KOLocalizedString(Language.Login.Password)
+        self.btn_Login.setTitle(KOLocalizedString(Language.Login.Login), for: .normal)
+        Forgotpassword.setTitle(KOLocalizedString(Language.Login.ForgetPassword), for: .normal)
+        btn_signup.setTitle(KOLocalizedString(Language.Login.DontAccount), for: .normal)
+        termCondition.setTitle(KOLocalizedString(Language.Login.ForgetPassword), for: .normal)
+
+
+
+    }
+    //––––––––––––––––––––––––––––––––––––––––
+    //MARK: - Notification -
+    //––––––––––––––––––––––––––––––––––––––––
+    /// Register notifications
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLocalized), name: KODidUpdateDictionary, object: nil)
+    }
+//    KODidChangeLanguage.Login
+    /// Function for notification
+    @objc private func updateLocalized(){
+        DispatchQueue.main.async {
+            self.localizedSettings()
+        }
+    }
+    //––––––––––––––––––––––––––––––––––––––––
+    //MARK: - Actions -
+    //––––––––––––––––––––––––––––––––––––––––
+    /// Function for change localization
+    @IBAction func Onpressd(_ sender: UIBarButtonItem) {
+          OnLanguagePressed()
+//        KOSetLanguage.Login((LNbutton != nil) ? "hi":"en")
+//          registerNotifications()
+    }
     
+     
     // ----------------------------------------------------------
     //MARK:- validation method
     // ----------------------------------------------------------

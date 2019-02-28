@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="fhW-Ea-2Pf">
             <objects>
-                <viewController id="MGV-lD-h1G" customClass="LoginVC" customModule="InitialWork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="MGV-lD-h1G" customClass="LoginVC" customModule="InitialWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXT-B6-9KQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,11 +128,11 @@
                                         <rect key="frame" x="20" y="459" width="335" height="104"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXX-lg-M0N" customClass="ThemeColorButton" customModule="InitialWork" customModuleProvider="target">
-                                                <rect key="frame" x="59.5" y="67" width="216" height="31"/>
+                                                <rect key="frame" x="63.5" y="67" width="208" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="nyR-pn-gBP"/>
                                                 </constraints>
-                                                <state key="normal" title="Don't have a Account ? SIgn Up"/>
+                                                <state key="normal" title="Don't have a Account? SIgnUp"/>
                                                 <state key="highlighted">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -233,10 +233,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gex-hX-xnv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="WPF-DC-vMX"/>
+                    <navigationItem key="navigationItem" title="Login" id="WPF-DC-vMX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="DUt-J6-xeg">
+                            <connections>
+                                <action selector="Onpressd:" destination="MGV-lD-h1G" id="O1h-jH-Xme"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="Forgotpassword" destination="L0f-Nz-EFw" id="yTF-Va-WGs"/>
+                        <outlet property="LNbutton" destination="DUt-J6-xeg" id="YJa-Sm-FYc"/>
                         <outlet property="btn_Login" destination="76n-Z1-bST" id="xkG-gS-jBd"/>
                         <outlet property="btn_check" destination="HqG-bO-SnF" id="rU1-MB-7Z8"/>
+                        <outlet property="btn_signup" destination="uXX-lg-M0N" id="YSM-AG-rGk"/>
+                        <outlet property="termCondition" destination="5ry-3x-pt3" id="CZQ-7J-lho"/>
                         <outlet property="txt_Password" destination="2NY-dh-UYS" id="hay-fe-Xqk"/>
                         <outlet property="txt_User" destination="nA5-7w-2tv" id="HlB-u1-txg"/>
                     </connections>

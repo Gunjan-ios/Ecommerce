@@ -1,0 +1,39 @@
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "2Df-I4-s9t"; */
+"2Df-I4-s9t.placeholder" = "कन्फर्म पासवर्ड";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "2NY-dh-UYS"; */
+"2NY-dh-UYS.placeholder" = "पासवर्ड";
+
+/* Class = "UIButton"; normalTitle = "Terms & Conditions"; ObjectID = "5ry-3x-pt3"; */
+"5ry-3x-pt3.normalTitle" = "Terms & Conditions";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "76n-Z1-bST"; */
+"76n-Z1-bST.normalTitle" = "लोगिन";
+
+/* Class = "UINavigationItem"; title = "Sign Up"; ObjectID = "Dce-jp-pdR"; */
+"Dce-jp-pdR.title" = "साइन अप";
+
+/* Class = "UITextField"; placeholder = "UserName"; ObjectID = "JBF-fV-iSw"; */
+"JBF-fV-iSw.placeholder" = "यूजरनाम";
+
+/* Class = "UIButton"; normalTitle = "Forget password?"; ObjectID = "L0f-Nz-EFw"; */
+"L0f-Nz-EFw.normalTitle" = "फोरगॉट पासवर्ड?";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "OvP-BL-dZq"; */
+"OvP-BL-dZq.placeholder" = "पासवर्ड";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "WPF-DC-vMX"; */
+"WPF-DC-vMX.title" = "लोगिन";
+
+/* Class = "UITextField"; placeholder = "UserName"; ObjectID = "nA5-7w-2tv"; */
+"nA5-7w-2tv.placeholder" = "यूजरनाम";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "rKH-u5-iTG"; */
+"rKH-u5-iTG.normalTitle" = "सब्मिट ";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "teA-g6-D3D"; */
+"teA-g6-D3D.placeholder" = "ईमेल";
+
+/* Class = "UIButton"; normalTitle = "Don't have a Account ? SIgn Up"; ObjectID = "uXX-lg-M0N"; */
+"uXX-lg-M0N.normalTitle" = "खाता नहीं है? साइन अप करें";

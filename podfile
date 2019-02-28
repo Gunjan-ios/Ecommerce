@@ -10,5 +10,6 @@ target 'InitialWork' do
        	pod 'LIHAlert'
         pod 'TextFieldEffects'
         pod 'IQKeyboardManagerSwift'
+        pod 'KOLocalizedString'
 
   end
