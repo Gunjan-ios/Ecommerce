@@ -122,20 +122,20 @@ class ParentViewController: UIViewController{
     /// Function for change localization
    
     func OnLanguagePressed() {
-        let alertController = UIAlertController(title: "Choose Language", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: KOLocalizedString(Language.Common.ChooseLanguage), message: nil, preferredStyle: .actionSheet)
         
-        let EnglishAction = UIAlertAction(title: "English", style: .default) { action in
+        let EnglishAction = UIAlertAction(title: KOLocalizedString(Language.Common.English), style: .default) { action in
             KOSetLanguage("en")
         }
         alertController.addAction(EnglishAction)
         
-        let HindiAction = UIAlertAction(title: "Hindi", style: .default) { action in
+        let HindiAction = UIAlertAction(title: KOLocalizedString(Language.Common.Hindi), style: .default) { action in
             KOSetLanguage("hi")
         }
         
         alertController.addAction(HindiAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in }
+        let cancelAction = UIAlertAction(title: KOLocalizedString(Language.Common.Cancel), style: .cancel) { action in }
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true)

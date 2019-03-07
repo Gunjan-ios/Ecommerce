@@ -285,9 +285,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxQ-SX-QVu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="VhS-wy-dut">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="VhS-wy-dut">
                                         <rect key="frame" x="124" y="36" width="127" height="128"/>
                                         <color key="backgroundColor" name="findHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="2Bz-lm-YBt"/>
                                             <constraint firstAttribute="height" constant="128" id="amN-1z-3dg"/>

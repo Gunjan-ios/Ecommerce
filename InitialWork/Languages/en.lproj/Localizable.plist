@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Choose Option</key>
+	<string>Choose Option</string>
+	<key>Choose Language</key>
+	<string>Choose Language</string>
+	<key>Photo Library</key>
+	<string>Photo Library</string>
+	<key>Camera</key>
+	<string>Camera</string>
+	<key>Hindi</key>
+	<string>हिंदी</string>
+	<key>English</key>
+	<string>English</string>
 	<key>Don&apos;t have a Account? SignUp</key>
 	<string>Don&apos;t have a Account? SIgn Up</string>
 	<key>Email</key>

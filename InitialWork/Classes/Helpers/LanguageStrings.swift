@@ -22,7 +22,16 @@ class  Language {
         static let TermsConditions = "Terms &amp; Conditions"
         static let  Password = "Password"
         static let ConfirmPassword = "Confirm Password"
+        
     }
-
+    class Common {
+        static let    ChooseOption = "Choose Option"
+        static let  ChooseLanguage = "Choose Language"
+        static let  Hindi = "Hindi"
+        static let  English   = "English"
+        static let  Camera = "Camera"
+        static let  PhotoLibrary   = "Photo Library"
+        static let  Cancel   = "Cancel"
+    }
     
 }

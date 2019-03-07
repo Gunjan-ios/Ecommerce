@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E089A872226C6680004FC07 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E089A862226C6680004FC07 /* LocalizationSystem.swift */; };
 		2E089A8C2226C9780004FC07 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E089A892226C9770004FC07 /* Localizable.plist */; };
 		2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */; };
 		2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E75C12223FA9100DAD984 /* Reach.swift */; };
@@ -57,7 +56,6 @@
 /* Begin PBXFileReference section */
 		2E089A7A2226A1730004FC07 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2E089A7B2226A1730004FC07 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
-		2E089A862226C6680004FC07 /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		2E089A8A2226C9770004FC07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2E089A8B2226C9770004FC07 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = hi; path = hi.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		2EB07D09221BEBC200242F2D /* InitialWork */ = {
 			isa = PBXGroup;
 			children = (
-				2E089A862226C6680004FC07 /* LocalizationSystem.swift */,
 				2EC2766A2220327600148E71 /* InitialWork.entitlements */,
 				2EB07D1B221BEC6D00242F2D /* Classes */,
 				2EB07D0A221BEBC200242F2D /* View */,
@@ -530,7 +527,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E089A872226C6680004FC07 /* LocalizationSystem.swift in Sources */,
 				2EB07D3D221BEC6D00242F2D /* GasStation.swift in Sources */,
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
 				2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */,

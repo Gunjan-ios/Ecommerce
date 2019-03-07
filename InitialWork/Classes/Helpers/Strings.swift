@@ -29,7 +29,6 @@ class Strings {
         static let ConfrimPasswrod = "Do not match password"
         static let invalidcredentials = "Please enter a valid login credentials."
         static let Terms = "Please Select Term & Condition."
-    
         
     }
     class Location {
