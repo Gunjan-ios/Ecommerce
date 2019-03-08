@@ -13,6 +13,7 @@
 		2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */; };
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
+		2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */; };
 		2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */; };
 		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAC79742223F00B00BAA8F6 /* Network.framework */; };
@@ -68,6 +69,7 @@
 		2E571C47221BE63000CC7394 /* InitialWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkUITests.swift; sourceTree = "<group>"; };
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EAC79742223F00B00BAA8F6 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
@@ -254,6 +256,7 @@
 				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
 				2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */,
 				2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */,
+				2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */,
 				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
 				2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */,
+				2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

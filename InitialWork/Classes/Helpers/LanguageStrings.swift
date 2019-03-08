@@ -22,7 +22,8 @@ class  Language {
         static let TermsConditions = "Terms &amp; Conditions"
         static let  Password = "Password"
         static let ConfirmPassword = "Confirm Password"
-        
+        static let  ForgetTitle = "Forget password"
+
     }
     class Common {
         static let    ChooseOption = "Choose Option"
@@ -32,6 +33,13 @@ class  Language {
         static let  Camera = "Camera"
         static let  PhotoLibrary   = "Photo Library"
         static let  Cancel   = "Cancel"
+        
+        static let waiting = "Please wait..."
+        static let defaultFailedMessage = "Failed. Please try again."
+        static let Connected = "Internet connected."
+        static let NoData = "Data not Found."
+        static let Internet = "Check your internet connection."
+        static let FetchData = "Fetching data..."
     }
     
 }

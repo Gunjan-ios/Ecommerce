@@ -52,7 +52,7 @@ class ParentViewController: UIViewController{
                 if self.APP.open_count == 2 {
                     self.APP.open_count = 0
 //                    Hud.showSuccess(message: Strings.Common.Connected)
-                    self.showAlert(message: Strings.Common.Connected, type: AlertType.success, navBar: true)
+                    self.showAlert(message:  KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: true)
                 }
                     })
         case .online(.wiFi):
@@ -62,7 +62,7 @@ class ParentViewController: UIViewController{
                 if self.APP.open_count == 2 {
                     self.APP.open_count = 0
 //                    Hud.showSuccess(message: Strings.Common.Connected)
-                    self.showAlert(message: Strings.Common.Connected, type: AlertType.success, navBar: true)
+                    self.showAlert(message: KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: true)
                 }
                     })
         }

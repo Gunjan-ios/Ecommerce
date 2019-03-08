@@ -34,8 +34,6 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
         self.img_profile.layer.cornerRadius = self.img_profile.frame.size.height/2
         settings()
         
-        let tap1 = UITapGestureRecognizer(target: self, action: #selector(onProfilePicturePressed(_:)))
-        img_profile.addGestureRecognizer(tap1)
         img_profile.isUserInteractionEnabled = true
         
         // Do any additional setup after loading the view.
@@ -43,10 +41,12 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
     //––––––––––––––––––––––––––––––––––––––––
     //MARK: - Settings -
     //––––––––––––––––––––––––––––––––––––––––
+    
     private func settings(){
         self.localizedSettings()
 //        self.registerNotifications()
     }
+    
     //––––––––––––––––––––––––––––––––––––––––
     //MARK: - Loclized Setting -
     //––––––––––––––––––––––––––––––––––––––––
@@ -66,26 +66,26 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
         let validation = Validation()
         
         if !self.txt_User.notEmpty() || !validation.isValidName(name: txt_User.text!.trim()) {
-            self.showAlert(message: Strings.Login.invalidName, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidName), type: AlertType.error, navBar: true)
             return false
         }
         
         if !self.txt_email.notEmpty() || !validation.isValidEmail(email: txt_email.text!.trim()) {
-            self.showAlert(message: Strings.Login.invalidEmail, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidEmail), type: AlertType.error, navBar: true)
             return false
         }
         
         if !self.txt_Password.notEmpty() || !validation.isValidPassword(Password: txt_Password.text!.trim()){
-            self.showAlert(message: Strings.Login.invalidpasswrod, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidpasswrod), type: AlertType.error, navBar: true)
             return false
         }
         
         if !self.txt_ConfirmPassword.notEmpty() || !validation.isValidPassword(Password: txt_ConfirmPassword.text!.trim()){
-            self.showAlert(message: Strings.Login.invalidpasswrod, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidConfirmpasswrod), type: AlertType.error, navBar: true)
             return false
         }
         if  self.txt_ConfirmPassword.text!.trim() != self.txt_Password.text!.trim(){
-            self.showAlert(message: Strings.Login.ConfrimPasswrod, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.ConfrimPasswrod), type: AlertType.error, navBar: true)
             return false
         }
         
@@ -102,60 +102,6 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
         {
             Hud.showSuccess(message: Strings.Common.pushdata)
             //            self.performSegue(withIdentifier: "LogintoHome", sender: self)
-        }
-    }
-    // ----------------------------------------------------------
-    //MARK:- TextField Method
-    // ----------------------------------------------------------
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
-        if textField == txt_User
-        {
-//            txt_User.resignFirstResponder()
-            txt_email.becomeFirstResponder()
-        }
-       else if textField == txt_email
-        {
-//            txt_email.resignFirstResponder()
-            txt_Password.becomeFirstResponder()
-        }
-       else if textField == txt_Password
-        {
-//            txt_User.resignFirstResponder()
-            txt_ConfirmPassword.becomeFirstResponder()
-        }
-        else{
-            //            self.OnSubmitPressed(self)
-            txt_ConfirmPassword.resignFirstResponder()
-        }
-        return false
-    }
-    
-    
-    
-    
-    //    TODO:- IMAGE PROFILE
-    
-    private func photoFromCamera() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera;
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
-    private func photoFromLibrary()
-    {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
-        {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .photoLibrary;
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
@@ -178,6 +124,62 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
         
         self.present(alertController, animated: true)
     }
+    
+    
+    
+    
+    // ----------------------------------------------------------
+    //MARK:- TextField Method
+    // ----------------------------------------------------------
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if textField == txt_User
+        {
+            txt_email.becomeFirstResponder()
+        }
+       else if textField == txt_email
+        {
+            txt_Password.becomeFirstResponder()
+        }
+       else if textField == txt_Password
+        {
+            txt_ConfirmPassword.becomeFirstResponder()
+        }
+        else{
+            //            self.OnSubmitPressed(self)
+            txt_ConfirmPassword.resignFirstResponder()
+        }
+        return false
+    }
+    
+    
+    
+    // ----------------------------------------------------------
+    //MARK:- IMAGE PROFILE
+    // ----------------------------------------------------------
+    
+    private func photoFromCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    private func photoFromLibrary()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+        {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let original_image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
@@ -186,7 +188,7 @@ class RegisterVC: ParentViewController,UITextFieldDelegate,UIImagePickerControll
         self.img_profile.layer.borderWidth = 1.0
         
         dismiss(animated:true, completion: nil)
-
+        
     }
   
     

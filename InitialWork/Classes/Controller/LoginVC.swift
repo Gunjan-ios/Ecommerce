@@ -102,17 +102,17 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
         let validation = Validation()
         
         if !self.txt_User.notEmpty() || !validation.isValidName(name: txt_User.text!.trim()) {
-            self.showAlert(message: Strings.Login.invalidName, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidName), type: AlertType.error, navBar: true)
             return false
         }
         
         if !self.txt_Password.notEmpty() || !validation.isValidPassword(Password: txt_Password.text!.trim()){
-            self.showAlert(message: Strings.Login.invalidpasswrod, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidpasswrod), type: AlertType.error, navBar: true)
             return false
         }
         if btn_check.isSelected != true
         {
-            self.showAlert(message: Strings.Login.Terms, type: AlertType.error, navBar: true)
+            self.showAlert(message:  KOLocalizedString(Strings.Login.Terms), type: AlertType.error, navBar: true)
         }
     
         return true

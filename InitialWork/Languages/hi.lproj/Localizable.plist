@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Please enter a valid Confirmpassword.</key>
+	<string>कृपया एक वैध पुष्टि पासवर्ड दर्ज करें।</string>
+	<key>Please Select Term &amp; Condition.</key>
+	<string>कृपया टर्म एंड कंडीशन चुनें।</string>
+	<key>Do not match password.</key>
+	<string>पासवर्ड से मेल नहीं खाता।</string>
+	<key>Please enter a valid password.</key>
+	<string>कृपया एक मान्य पासवर्ड दर्ज करें।</string>
+	<key>Please enter a valid Email.</key>
+	<string>कृपया अपना मान्य ईमेल लिखें।</string>
+	<key>Please enter a valid name.</key>
+	<string>कृपया एक मान्य नाम दर्ज करें।</string>
+	<key>Fetching data...</key>
+	<string>डेटा लाया जा रहा है...</string>
+	<key>Check your internet connection.</key>
+	<string>अपना इंटरनेट संपर्क जांचे</string>
+	<key>Data not Found.</key>
+	<string>डेटा नहीं मिला</string>
+	<key>Internet connected.</key>
+	<string>इंटरनेट से जुड़ा</string>
+	<key>Failed. Please try again.</key>
+	<string>कृपया पुन: प्रयास करें</string>
+	<key>Please wait...</key>
+	<string>कृपया प्रतीक्षा करें...</string>
+	<key>Forget password</key>
+	<string>फोरगॉट पासवर्ड</string>
 	<key>Choose Option</key>
 	<string>चूस ऑप्शन</string>
 	<key>Choose Language</key>
