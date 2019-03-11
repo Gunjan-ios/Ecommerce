@@ -9,7 +9,7 @@
 
 import Foundation
 import LIHAlert
-
+import KOLocalizedString
 
 class AlertManager: LIHAlertManager {
 
@@ -18,7 +18,7 @@ class AlertManager: LIHAlertManager {
 
     static func getErrorAlert() -> LIHAlert
     {
-        let alert = super.getTextAlert(message: Strings.Common.defaultFailedMessage)
+        let alert = super.getTextAlert(message: KOLocalizedString(Language.Common.defaultFailedMessage))
         alert.alertColor = errorColor
         alert.alertAlpha = 1.0
         alert.autoCloseTimeInterval = 2.0
@@ -41,7 +41,7 @@ class AlertManager: LIHAlertManager {
 
     static func getErrorAlertNoNavBar() -> LIHAlert {
 
-        let alert = super.getTextAlert(message: Strings.Common.defaultFailedMessage)
+        let alert = super.getTextAlert(message: KOLocalizedString(Language.Common.defaultFailedMessage))
         alert.alertColor = errorColor
         alert.alertAlpha = 1.0
         alert.autoCloseTimeInterval = 2.0
@@ -53,7 +53,7 @@ class AlertManager: LIHAlertManager {
     
     static func FetchErrorAlert() -> LIHAlert
     {
-        let  alert = super.getProcessingAlert(message: Strings.Common.Internet)
+        let  alert = super.getProcessingAlert(message: KOLocalizedString(Language.Common.Internet))
         alert.alertColor = errorColor
         alert.alertAlpha = 1.0
         alert.autoCloseTimeInterval = 2.0

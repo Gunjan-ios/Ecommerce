@@ -165,7 +165,7 @@
                                                 <rect key="frame" x="10" y="8" width="25" height="25"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ry-3x-pt3" customClass="ThemeColorButton" customModule="InitialWork" customModuleProvider="target">
-                                                <rect key="frame" x="43" y="6" width="137" height="29"/>
+                                                <rect key="frame" x="43" y="6" width="157" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Terms &amp; Conditions">
                                                     <color key="titleColor" red="0.83529411760000005" green="0.31372549020000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,11 +198,11 @@
                                             <constraint firstItem="fLV-DN-4QO" firstAttribute="top" secondItem="fs6-9y-j41" secondAttribute="topMargin" id="tEf-Fz-SkK"/>
                                             <constraint firstItem="HqG-bO-SnF" firstAttribute="top" secondItem="fLV-DN-4QO" secondAttribute="top" id="u2P-qm-O3V"/>
                                             <constraint firstAttribute="width" constant="200" id="vzR-hs-NkM"/>
-                                            <constraint firstAttribute="trailing" secondItem="5ry-3x-pt3" secondAttribute="trailing" constant="20" id="zFn-XY-Pbh"/>
+                                            <constraint firstAttribute="trailing" secondItem="5ry-3x-pt3" secondAttribute="trailing" id="zFn-XY-Pbh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="UI7-47-OIY" firstAttribute="leading" secondItem="PfA-M8-kNk" secondAttribute="leading" constant="20" id="2yF-e4-c4m"/>
                                     <constraint firstAttribute="trailing" secondItem="UI7-47-OIY" secondAttribute="trailing" constant="20" id="4pS-7u-XYw"/>
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjg-HX-NgR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1396" y="-209"/>
+            <point key="canvasLocation" x="-1396" y="-209.14542728635683"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w12-Gb-gra">
@@ -478,7 +478,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="c8V-wT-w6c" firstAttribute="top" secondItem="VhS-wy-dut" secondAttribute="bottom" constant="23" id="0zk-Ki-dae"/>
@@ -608,6 +608,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bqF-Xf-Nr5" firstAttribute="leading" secondItem="hJF-O5-0sq" secondAttribute="leading" constant="20" id="1i0-vW-H6f"/>
                                     <constraint firstItem="Lcf-qv-c6Y" firstAttribute="centerX" secondItem="bqF-Xf-Nr5" secondAttribute="centerX" id="43h-Su-1BC"/>

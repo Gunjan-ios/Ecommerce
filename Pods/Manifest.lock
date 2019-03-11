@@ -3,6 +3,7 @@ PODS:
   - IQKeyboardManagerSwift (6.1.1)
   - KOLocalizedString (1.0.0)
   - LIHAlert (2.1.1)
+  - Pastel (0.5.1)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - KOLocalizedString
   - LIHAlert
+  - Pastel
   - SDWebImage
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - TextFieldEffects
@@ -24,6 +26,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - KOLocalizedString
     - LIHAlert
+    - Pastel
     - SDWebImage
     - TextFieldEffects
 
@@ -41,10 +44,11 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   KOLocalizedString: bb33077b80f51bd0b800714903f0ad1bef59d645
   LIHAlert: a027605673986d03b896e4f4a901f393b15840b9
+  Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TextFieldEffects: bf9e9cac7cb1a97d632fbcd0724bb6347dd86633
 
-PODFILE CHECKSUM: 5e32884cefceea48ed416f2d2413f278c2016b95
+PODFILE CHECKSUM: c348024a635fd760ad7df697c4e0363d776e7eaf
 
 COCOAPODS: 1.5.3

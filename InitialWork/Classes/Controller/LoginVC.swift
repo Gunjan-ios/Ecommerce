@@ -9,6 +9,7 @@
 import UIKit
 import TextFieldEffects
 import KOLocalizedString
+import Pastel
 
 class LoginVC: ParentViewController ,UITextFieldDelegate{
 
@@ -49,6 +50,34 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
     private func settings(){
         self.localizedSettings()
         self.registerNotifications()
+//        self.AutoColorChnages()
+    }
+    func AutoColorChnages(){
+        
+        let pastelView = PastelView(frame: view.bounds)
+        
+        //MARK: -  Custom Direction
+        
+        pastelView.startPastelPoint = .bottomLeft
+        pastelView.endPastelPoint = .topRight
+        
+        //MARK: -  Custom Duration
+        
+        pastelView.animationDuration = 3.0
+        
+        //MARK: -  Custom Color
+        
+        pastelView.setColors([
+                             UIColor(red: 156/255, green: 39/255, blue: 176/255, alpha: 0.5),
+                              UIColor(red: 255/255, green: 64/255, blue: 129/255, alpha: 0.5),
+                              UIColor(red: 123/255, green: 31/255, blue: 162/255, alpha: 0.5),
+                              UIColor(red: 32/255, green: 76/255, blue: 255/255, alpha: 0.5),
+                              UIColor(red: 32/255, green: 158/255, blue: 255/255, alpha: 0.5),
+                              UIColor(red: 90/255, green: 120/255, blue: 127/255, alpha: 0.5),
+                              UIColor(red: 58/255, green: 255/255, blue: 217/255, alpha: 0.5)])
+        
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
     }
     //––––––––––––––––––––––––––––––––––––––––
     //MARK: - Loclized Setting -
@@ -63,7 +92,7 @@ class LoginVC: ParentViewController ,UITextFieldDelegate{
         self.btn_Login.setTitle(KOLocalizedString(Language.Login.Login), for: .normal)
         Forgotpassword.setTitle(KOLocalizedString(Language.Login.ForgetPassword), for: .normal)
         btn_signup.setTitle(KOLocalizedString(Language.Login.DontAccount), for: .normal)
-        termCondition.setTitle(KOLocalizedString(Language.Login.ForgetPassword), for: .normal)
+        termCondition.setTitle(KOLocalizedString(Language.Login.TermsConditions), for: .normal)
 
 
 

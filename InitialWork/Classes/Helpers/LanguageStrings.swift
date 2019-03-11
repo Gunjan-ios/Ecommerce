@@ -19,7 +19,7 @@ class  Language {
         static let UserName = "UserName"
         static let SignUp = "Sign Up"
         static let Login = "Login"
-        static let TermsConditions = "Terms &amp; Conditions"
+        static let TermsConditions = "Terms & Conditions"
         static let  Password = "Password"
         static let ConfirmPassword = "Confirm Password"
         static let  ForgetTitle = "Forget password"

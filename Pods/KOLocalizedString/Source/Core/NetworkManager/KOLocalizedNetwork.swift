@@ -125,7 +125,7 @@ class KOLocalizedNetwork:KOLocalizedNetworkProtocol {
     /// - Parameter array: Dictionary array
     /// - Returns: KOLocalizedObjectProtocol array
     private func _createObjectArray(_ array:[[String:Any]]) -> [KOLocalizedObjectProtocol] {
-        let returnArray:[KOLocalizedObjectProtocol] = array.flatMap{
+        let returnArray:[KOLocalizedObjectProtocol] = array.compactMap{
             let builder = KOLocalizedObjectBuilder($0)
             builder.setConfiguration(self._configuration)
             return builder.create()
