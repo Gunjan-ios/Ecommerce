@@ -10,6 +10,7 @@
 		2E089A8C2226C9780004FC07 /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E089A892226C9770004FC07 /* Localizable.plist */; };
 		2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */; };
 		2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E75C12223FA9100DAD984 /* Reach.swift */; };
+		2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EE9F9227473050066009C /* UIView_Borders.swift */; };
 		2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */; };
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
@@ -61,6 +62,7 @@
 		2E089A8B2226C9770004FC07 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = hi; path = hi.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
 		2E0E75C12223FA9100DAD984 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		2E0EE9F9227473050066009C /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
 		2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		2E571C28221BE62F00CC7394 /* InitialWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitialWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C3C221BE63000CC7394 /* InitialWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +273,7 @@
 		2EB07D24221BEC6D00242F2D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2E0EE9F9227473050066009C /* UIView_Borders.swift */,
 				2EB07D25221BEC6D00242F2D /* Strings.swift */,
 				2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */,
 				2EB07D26221BEC6D00242F2D /* Consts.swift */,
@@ -552,6 +555,7 @@
 				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
 				2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */,
 				2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */,
+				2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
