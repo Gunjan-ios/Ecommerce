@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
 class  Language {
     
-    class Login
+    struct Login
     {
+//        static let DontAccount = NSLocalizedString("Don't have a Account? SignUp", comment: "Don't have a Account? SignUp")
+
         static let DontAccount  = "Don't have a Account? SignUp"
         static let  Email = "Email"
         static let  Submit   = "Submit"
@@ -25,8 +26,8 @@ class  Language {
         static let  ForgetTitle = "Forget password"
 
     }
-    class Common {
-        static let    ChooseOption = "Choose Option"
+    struct Common {
+        static let   ChooseOption = "Choose Option"
         static let  ChooseLanguage = "Choose Language"
         static let  Hindi = "Hindi"
         static let  English   = "English"

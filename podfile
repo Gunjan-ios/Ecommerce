@@ -12,5 +12,5 @@ target 'InitialWork' do
         pod 'IQKeyboardManagerSwift'
         pod 'KOLocalizedString'
         pod 'Pastel'
-
+	pod 'OktaAuth'
   end

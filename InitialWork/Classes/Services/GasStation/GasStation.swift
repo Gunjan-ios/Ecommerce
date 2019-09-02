@@ -29,7 +29,7 @@ class GasStation: ApiCommunicator {
              "fuel_type" : "\(fuel_type)",
               "api_key" : "\(api_key)"
         ]
-        self.executeApi(endpoint: "nearest.json?", params: params, method: .get) { (data: [NSDictionary]?, message, code) in
+        self.executeApi(endpoint: Strings.EndPoints.Login, params: params, method: .get) { (data: [NSDictionary]?, message, code) in
             if let Gasdata = data, code == 200
             {
                 completion(Gasdata, message)

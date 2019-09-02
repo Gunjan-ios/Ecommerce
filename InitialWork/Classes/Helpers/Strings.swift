@@ -10,8 +10,12 @@
 import Foundation
 
 class Strings {
-   
-    class Common {
+    
+    struct EndPoints {
+      static let Login = "Login"
+    }
+    
+    struct Common {
         static let waiting = "Please wait.."
         static let defaultFailedMessage = "Failed. Please try again."
         static let cameramessage = "Can't aceess camera in this device."
@@ -22,7 +26,7 @@ class Strings {
         static let Internet = "Check your internet connection."
         static let FetchData = "Fetching data..."
     }
-    class Login {
+    struct Login {
         static let invalidName = "Please enter a valid name."
         static let invalidEmail = "Please enter a valid Email."
         static let invalidpasswrod = "Please enter a valid password."
@@ -32,7 +36,7 @@ class Strings {
         static let Terms = "Please Select Term & Condition."
         
     }
-    class Location {
+    struct Location {
         static let locationDisabled = "Location services are disabled."
         static let locationDenied = "Access to location service is disabled."
     }

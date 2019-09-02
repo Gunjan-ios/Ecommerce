@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
 		2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */; };
+		2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FE21B22F2AA3900F36439 /* Okta.plist */; };
+		2E7FE21E22F2AC5300F36439 /* OktaAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */; };
 		2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */; };
 		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAC79742223F00B00BAA8F6 /* Network.framework */; };
@@ -72,6 +74,8 @@
 		2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkUITests.swift; sourceTree = "<group>"; };
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		2E7FE21B22F2AA3900F36439 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
+		2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OktaAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EAC79742223F00B00BAA8F6 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7FE21E22F2AC5300F36439 /* OktaAuth.framework in Frameworks */,
 				2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */,
 				91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */,
 			);
@@ -190,6 +195,7 @@
 				2EB07D0A221BEBC200242F2D /* View */,
 				2E089A882226C9770004FC07 /* Languages */,
 				2EB07D41221C15BF00242F2D /* Info.plist */,
+				2E7FE21B22F2AA3900F36439 /* Okta.plist */,
 			);
 			path = InitialWork;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 		CFBEF343FFFA573729275283 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */,
 				2EAC79742223F00B00BAA8F6 /* Network.framework */,
 				D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */,
 			);
@@ -447,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB07D17221BEBC200242F2D /* Main.storyboard in Resources */,
+				2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */,
 				2E089A8C2226C9780004FC07 /* Localizable.plist in Resources */,
 				2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */,
 				2EB07D16221BEBC200242F2D /* LaunchScreen.storyboard in Resources */,
@@ -476,34 +484,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/KOLocalizedString/KOLocalizedString.framework",
-				"${BUILT_PRODUCTS_DIR}/LIHAlert/LIHAlert.framework",
-				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KOLocalizedString.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LIHAlert.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InitialWork/Pods-InitialWork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		865307F5E5090006F3224E96 /* [CP] Check Pods Manifest.lock */ = {
