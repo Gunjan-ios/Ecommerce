@@ -11,13 +11,10 @@
 		2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */; };
 		2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E75C12223FA9100DAD984 /* Reach.swift */; };
 		2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EE9F9227473050066009C /* UIView_Borders.swift */; };
-		2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */; };
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
-		2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */; };
 		2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FE21B22F2AA3900F36439 /* Okta.plist */; };
-		2E7FE21E22F2AC5300F36439 /* OktaAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */; };
-		2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */; };
+		2EA8F217231D2CE800D99D6D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA8F216231D2CE800D99D6D /* Utils.swift */; };
 		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAC79742223F00B00BAA8F6 /* Network.framework */; };
 		2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0B221BEBC200242F2D /* Assets.xcassets */; };
@@ -37,6 +34,16 @@
 		2EB07D3E221BEC6D00242F2D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D2F221BEC6D00242F2D /* ApiManager.swift */; };
 		2EB07D3F221BEC6D00242F2D /* ApiCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D30221BEC6D00242F2D /* ApiCommunicator.swift */; };
 		2EB07D40221BEC6D00242F2D /* Gasstation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB07D32221BEC6D00242F2D /* Gasstation.swift */; };
+		2EEC64D3231E78A800055545 /* TxtRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC64CF231E78A800055545 /* TxtRegular.ttf */; };
+		2EEC64D4231E78A800055545 /* TxtMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC64D0231E78A800055545 /* TxtMedium.ttf */; };
+		2EEC64D5231E78A800055545 /* TxtBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC64D1231E78A800055545 /* TxtBold.ttf */; };
+		2EEC64D6231E78A800055545 /* TxtSemibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC64D2231E78A800055545 /* TxtSemibold.ttf */; };
+		2EEC64D8231E868900055545 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64D7231E868900055545 /* CustomFont.swift */; };
+		2EEC64DA231E98F900055545 /* CustomTextfiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64D9231E98F900055545 /* CustomTextfiled.swift */; };
+		2EEC64DF231E9C3B00055545 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64DC231E9C3A00055545 /* ForgotPassword.swift */; };
+		2EEC64E0231E9C3B00055545 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64DD231E9C3A00055545 /* RegisterVC.swift */; };
+		2EEC64E1231E9C3B00055545 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64DE231E9C3A00055545 /* LoginVC.swift */; };
+		2EEC64E3231E9C5500055545 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC64E2231E9C5500055545 /* ResetPasswordVC.swift */; };
 		91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +72,6 @@
 		2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
 		2E0E75C12223FA9100DAD984 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		2E0EE9F9227473050066009C /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
-		2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		2E571C28221BE62F00CC7394 /* InitialWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitialWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C3C221BE63000CC7394 /* InitialWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C40221BE63000CC7394 /* InitialWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkTests.swift; sourceTree = "<group>"; };
@@ -73,10 +79,9 @@
 		2E571C47221BE63000CC7394 /* InitialWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkUITests.swift; sourceTree = "<group>"; };
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		2E7FE21B22F2AA3900F36439 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OktaAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2EA8F216231D2CE800D99D6D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EAC79742223F00B00BAA8F6 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		2EB07D0B221BEBC200242F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +103,16 @@
 		2EB07D32221BEC6D00242F2D /* Gasstation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gasstation.swift; sourceTree = "<group>"; };
 		2EB07D41221C15BF00242F2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InitialWork/Info.plist; sourceTree = SOURCE_ROOT; };
 		2EC2766A2220327600148E71 /* InitialWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InitialWork.entitlements; sourceTree = "<group>"; };
+		2EEC64CF231E78A800055545 /* TxtRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TxtRegular.ttf; sourceTree = "<group>"; };
+		2EEC64D0231E78A800055545 /* TxtMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TxtMedium.ttf; sourceTree = "<group>"; };
+		2EEC64D1231E78A800055545 /* TxtBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TxtBold.ttf; sourceTree = "<group>"; };
+		2EEC64D2231E78A800055545 /* TxtSemibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TxtSemibold.ttf; sourceTree = "<group>"; };
+		2EEC64D7231E868900055545 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		2EEC64D9231E98F900055545 /* CustomTextfiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfiled.swift; sourceTree = "<group>"; };
+		2EEC64DC231E9C3A00055545 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		2EEC64DD231E9C3A00055545 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		2EEC64DE231E9C3A00055545 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2EEC64E2231E9C5500055545 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		B62D4C2C63A3B8A25F781AB7 /* Pods-InitialWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FA7A177697FE46A313AB33 /* Pods-InitialWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.release.xcconfig"; sourceTree = "<group>"; };
 		D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InitialWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7FE21E22F2AC5300F36439 /* OktaAuth.framework in Frameworks */,
 				2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */,
 				91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */,
 			);
@@ -194,6 +208,7 @@
 				2EB07D1B221BEC6D00242F2D /* Classes */,
 				2EB07D0A221BEBC200242F2D /* View */,
 				2E089A882226C9770004FC07 /* Languages */,
+				2EEC64C4231E301D00055545 /* Resources */,
 				2EB07D41221C15BF00242F2D /* Info.plist */,
 				2E7FE21B22F2AA3900F36439 /* Okta.plist */,
 			);
@@ -261,10 +276,8 @@
 		2EB07D21221BEC6D00242F2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2EEC64DB231E9C3A00055545 /* Login and Register */,
 				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
-				2EAAA62C221C19BE00AE9B4D /* LoginVC.swift */,
-				2E3440D0221EA28B00A47EF8 /* RegisterVC.swift */,
-				2E6D5CCD22327C6500E1F4EA /* ForgotPassword.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,8 +298,11 @@
 				2EB07D26221BEC6D00242F2D /* Consts.swift */,
 				2EB07D27221BEC6D00242F2D /* Enums.swift */,
 				2EB07D28221BEC6D00242F2D /* RoundedView.swift */,
+				2EEC64D9231E98F900055545 /* CustomTextfiled.swift */,
+				2EEC64D7231E868900055545 /* CustomFont.swift */,
 				2EB07D29221BEC6D00242F2D /* UserData.swift */,
 				2EB07D2A221BEC6D00242F2D /* Extensions.swift */,
+				2EA8F216231D2CE800D99D6D /* Utils.swift */,
 				2EB07D2B221BEC6D00242F2D /* Validation.swift */,
 			);
 			path = Helpers;
@@ -317,6 +333,36 @@
 				2EB07D32221BEC6D00242F2D /* Gasstation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2EEC64C4231E301D00055545 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2EEC64CE231E789400055545 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2EEC64CE231E789400055545 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2EEC64D1231E78A800055545 /* TxtBold.ttf */,
+				2EEC64D0231E78A800055545 /* TxtMedium.ttf */,
+				2EEC64CF231E78A800055545 /* TxtRegular.ttf */,
+				2EEC64D2231E78A800055545 /* TxtSemibold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2EEC64DB231E9C3A00055545 /* Login and Register */ = {
+			isa = PBXGroup;
+			children = (
+				2EEC64DC231E9C3A00055545 /* ForgotPassword.swift */,
+				2EEC64DD231E9C3A00055545 /* RegisterVC.swift */,
+				2EEC64DE231E9C3A00055545 /* LoginVC.swift */,
+				2EEC64E2231E9C5500055545 /* ResetPasswordVC.swift */,
+			);
+			path = "Login and Register";
 			sourceTree = "<group>";
 		};
 		CFBEF343FFFA573729275283 /* Frameworks */ = {
@@ -453,8 +499,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEC64D5231E78A800055545 /* TxtBold.ttf in Resources */,
+				2EEC64D4231E78A800055545 /* TxtMedium.ttf in Resources */,
 				2EB07D17221BEBC200242F2D /* Main.storyboard in Resources */,
 				2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */,
+				2EEC64D6231E78A800055545 /* TxtSemibold.ttf in Resources */,
+				2EEC64D3231E78A800055545 /* TxtRegular.ttf in Resources */,
 				2E089A8C2226C9780004FC07 /* Localizable.plist in Resources */,
 				2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */,
 				2EB07D16221BEBC200242F2D /* LaunchScreen.storyboard in Resources */,
@@ -525,17 +575,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB07D3D221BEC6D00242F2D /* GasStation.swift in Sources */,
+				2EEC64E3231E9C5500055545 /* ResetPasswordVC.swift in Sources */,
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
 				2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */,
 				2EB07D3F221BEC6D00242F2D /* ApiCommunicator.swift in Sources */,
-				2E3440D1221EA28B00A47EF8 /* RegisterVC.swift in Sources */,
 				2EB07D3C221BEC6D00242F2D /* Validation.swift in Sources */,
 				2EB07D37221BEC6D00242F2D /* Consts.swift in Sources */,
+				2EA8F217231D2CE800D99D6D /* Utils.swift in Sources */,
 				2EB07D3A221BEC6D00242F2D /* UserData.swift in Sources */,
 				2EB07D40221BEC6D00242F2D /* Gasstation.swift in Sources */,
 				2EB07D18221BEBC200242F2D /* AppDelegate.swift in Sources */,
 				2EB07D3B221BEC6D00242F2D /* Extensions.swift in Sources */,
-				2EAAA62D221C19BE00AE9B4D /* LoginVC.swift in Sources */,
+				2EEC64DA231E98F900055545 /* CustomTextfiled.swift in Sources */,
+				2EEC64D8231E868900055545 /* CustomFont.swift in Sources */,
 				2EB07D3E221BEC6D00242F2D /* ApiManager.swift in Sources */,
 				2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */,
 				2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */,
@@ -543,8 +595,10 @@
 				2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */,
 				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
 				2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */,
-				2E6D5CCE22327C6500E1F4EA /* ForgotPassword.swift in Sources */,
+				2EEC64E1231E9C3B00055545 /* LoginVC.swift in Sources */,
 				2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */,
+				2EEC64DF231E9C3B00055545 /* ForgotPassword.swift in Sources */,
+				2EEC64E0231E9C3B00055545 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gunjan.InitialWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gunjan.Ecommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -761,7 +815,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gunjan.InitialWork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gunjan.Ecommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

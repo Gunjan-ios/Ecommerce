@@ -20,11 +20,19 @@ class RoundedView: UIView {
 class ThemeColorButton: UIButton {
     
     override func awakeFromNib() {
-//        layer.cornerRadius = frame.size.height/2
+        layer.cornerRadius = frame.size.height/2
 //        layer.borderColor = UIColor.black.cgColor
 //        layer.borderWidth = 1
-        setTitleColor(THEME_COLOR, for: .normal)
+        backgroundColor = YELLOW_COLOR
+        titleLabel?.font = UIFont (name: BoldFont, size: 20.0)
+        setTitleColor(UIColor.white, for: .normal)
     }
-    
-}
+//    == HindVadodara-Medium
+//    == HindVadodara-SemiBold
 
+}
+class RegularFontButton: UIButton {
+    override func awakeFromNib() {
+        titleLabel?.font = UIFont (name: RegularFont, size: UIFont.systemFontSize)
+    }
+}

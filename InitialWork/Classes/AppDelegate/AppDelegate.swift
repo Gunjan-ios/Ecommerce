@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         open_count =  1
         KOLocalizedCore.main.configure()
         debugPrint(KOGetLanguageArray())
+        UIFont.overrideDefaultTypography()
 
         // Override point for customization after application launch.
         return true
