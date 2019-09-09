@@ -59,12 +59,16 @@ class AlertManager: LIHAlertManager {
         alert.autoCloseTimeInterval = 2.0
         alert.touchBackgroundToDismiss = true
         alert.dimsBackground = true
-        if UIScreen.main.bounds.size.height == 812 || UIScreen.main.bounds.size.height == 896
-        {
-            alert.alertHeight += 20
-            alert.paddingTop += 10
-            
-        }
+        alert.hasNavigationBar = false
+        alert.alertHeight += 20
+        alert.paddingTop += 10
+        
+//        if UIScreen.main.bounds.size.height == 812 || UIScreen.main.bounds.size.height == 896
+//        {
+//            alert.alertHeight += 20
+//            alert.paddingTop += 10
+//            
+//        }
 //        if UIScreen.main.bounds.size.height == 896
 //        {
 //            alert.alertHeight += 25

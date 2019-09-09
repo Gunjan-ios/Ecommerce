@@ -16,3 +16,20 @@ class MyTextfiled: MadokaTextField {
         placeholderColor = UIColor .gray
     }
 }
+
+class BoldLabel: UILabel {
+    override func awakeFromNib(){
+        self.font = UIFont (name: BoldFont, size: UIFont.systemFontSize)
+        print(UIFont.systemFontSize)
+    }
+}
+class mediumLabel: UILabel {
+    override func awakeFromNib(){
+        self.font = UIFont (name: MediumFont, size: UIFont.systemFontSize)
+    }
+}
+class SemiboldLabel: UILabel {
+    override func awakeFromNib(){
+        self.font = UIFont (name: SemiBoldFont, size: UIFont.systemFontSize)
+    }
+}

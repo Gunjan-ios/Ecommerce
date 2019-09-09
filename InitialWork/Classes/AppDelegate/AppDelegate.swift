@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         KOLocalizedCore.main.configure()
         debugPrint(KOGetLanguageArray())
         UIFont.overrideDefaultTypography()
+    
 
         // Override point for customization after application launch.
         return true

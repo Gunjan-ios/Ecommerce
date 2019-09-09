@@ -11,5 +11,7 @@ target 'InitialWork' do
         pod 'TextFieldEffects'
         pod 'IQKeyboardManagerSwift'
         pod 'KOLocalizedString'
-
-  end
+	pod 'JAPinView', :git=> 'https://github.com/JayachandraA/JAPinView.git'
+	pod 'UPCarouselFlowLayout'
+	 pod 'SSCustomTabbar', '~> 2.0'
+end

@@ -14,7 +14,13 @@ class Strings {
     struct EndPoints {
       static let Login = "Login"
     }
-    
+    struct Identifiers {
+        static let OTPvc = "OTPvc"
+        static let HomeVC  = "HomeVC"
+         static let HomeCell  = "HomeCell"
+        static let ResetPasswordVC  = "ResetPasswordVC"
+        
+    }
     struct Common {
         static let waiting = "Please wait.."
         static let defaultFailedMessage = "Failed. Please try again."

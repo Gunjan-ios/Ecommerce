@@ -11,9 +11,17 @@
 		2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */; };
 		2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E75C12223FA9100DAD984 /* Reach.swift */; };
 		2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EE9F9227473050066009C /* UIView_Borders.swift */; };
+		2E20AA97231FC7F800EFB53D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20AA96231FC7F800EFB53D /* HomeVC.swift */; };
+		2E2CC2952326602500B7D044 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CC2942326602500B7D044 /* HomeCell.swift */; };
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
 		2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FE21B22F2AA3900F36439 /* Okta.plist */; };
+		2E9708932320DE4D0022D55B /* WalkThroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708922320DE4D0022D55B /* WalkThroughVC.swift */; };
+		2E9708962320DECC0022D55B /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708942320DECC0022D55B /* CarouselCollectionViewCell.swift */; };
+		2E9708972320DECC0022D55B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708952320DECC0022D55B /* Character.swift */; };
+		2E9708992320DEF30022D55B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708982320DEF30022D55B /* GradientView.swift */; };
+		2EA186D0231F91B300871AE3 /* OTPvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA186CF231F91B300871AE3 /* OTPvc.swift */; };
+		2EA186D2231F948C00871AE3 /* JAPinView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA186D1231F948C00871AE3 /* JAPinView.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2EA8F217231D2CE800D99D6D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA8F216231D2CE800D99D6D /* Utils.swift */; };
 		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAC79742223F00B00BAA8F6 /* Network.framework */; };
@@ -72,6 +80,8 @@
 		2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
 		2E0E75C12223FA9100DAD984 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		2E0EE9F9227473050066009C /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
+		2E20AA96231FC7F800EFB53D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2E2CC2942326602500B7D044 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2E571C28221BE62F00CC7394 /* InitialWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitialWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C3C221BE63000CC7394 /* InitialWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E571C40221BE63000CC7394 /* InitialWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWorkTests.swift; sourceTree = "<group>"; };
@@ -81,6 +91,12 @@
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E7FE21B22F2AA3900F36439 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OktaAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9708922320DE4D0022D55B /* WalkThroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughVC.swift; sourceTree = "<group>"; };
+		2E9708942320DECC0022D55B /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		2E9708952320DECC0022D55B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		2E9708982320DEF30022D55B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2EA186CF231F91B300871AE3 /* OTPvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPvc.swift; sourceTree = "<group>"; };
+		2EA186D1231F948C00871AE3 /* JAPinView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JAPinView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA8F216231D2CE800D99D6D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EAC79742223F00B00BAA8F6 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
@@ -123,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA186D2231F948C00871AE3 /* JAPinView.framework in Frameworks */,
 				2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */,
 				91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */,
 			);
@@ -159,6 +176,29 @@
 				2E0E75C12223FA9100DAD984 /* Reach.swift */,
 			);
 			path = Reach;
+			sourceTree = "<group>";
+		};
+		2E2CC28F23265FD500B7D044 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2E20AA96231FC7F800EFB53D /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2E2CC29223265FFA00B7D044 /* TableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableviewCell;
+			sourceTree = "<group>";
+		};
+		2E2CC2932326600300B7D044 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E2CC2942326602500B7D044 /* HomeCell.swift */,
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 		2E571C1F221BE62F00CC7394 = {
@@ -201,16 +241,27 @@
 			path = InitialWorkUITests;
 			sourceTree = "<group>";
 		};
+		2E9708912320DC890022D55B /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				2E9708942320DECC0022D55B /* CarouselCollectionViewCell.swift */,
+				2E9708982320DEF30022D55B /* GradientView.swift */,
+				2E9708952320DECC0022D55B /* Character.swift */,
+				2E9708922320DE4D0022D55B /* WalkThroughVC.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
 		2EB07D09221BEBC200242F2D /* InitialWork */ = {
 			isa = PBXGroup;
 			children = (
 				2EC2766A2220327600148E71 /* InitialWork.entitlements */,
 				2EB07D1B221BEC6D00242F2D /* Classes */,
-				2EB07D0A221BEBC200242F2D /* View */,
 				2E089A882226C9770004FC07 /* Languages */,
 				2EEC64C4231E301D00055545 /* Resources */,
-				2EB07D41221C15BF00242F2D /* Info.plist */,
+				2EB07D0A221BEBC200242F2D /* View */,
 				2E7FE21B22F2AA3900F36439 /* Okta.plist */,
+				2EB07D41221C15BF00242F2D /* Info.plist */,
 			);
 			path = InitialWork;
 			sourceTree = "<group>";
@@ -276,6 +327,8 @@
 		2EB07D21221BEC6D00242F2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2E9708912320DC890022D55B /* WalkThrough */,
+				2E2CC28F23265FD500B7D044 /* Home */,
 				2EEC64DB231E9C3A00055545 /* Login and Register */,
 				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
 			);
@@ -285,6 +338,8 @@
 		2EB07D23221BEC6D00242F2D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2E2CC2932326600300B7D044 /* CollectionCell */,
+				2E2CC29223265FFA00B7D044 /* TableviewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -360,6 +415,7 @@
 				2EEC64DC231E9C3A00055545 /* ForgotPassword.swift */,
 				2EEC64DD231E9C3A00055545 /* RegisterVC.swift */,
 				2EEC64DE231E9C3A00055545 /* LoginVC.swift */,
+				2EA186CF231F91B300871AE3 /* OTPvc.swift */,
 				2EEC64E2231E9C5500055545 /* ResetPasswordVC.swift */,
 			);
 			path = "Login and Register";
@@ -368,6 +424,7 @@
 		CFBEF343FFFA573729275283 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EA186D1231F948C00871AE3 /* JAPinView.framework */,
 				2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */,
 				2EAC79742223F00B00BAA8F6 /* Network.framework */,
 				D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */,
@@ -577,6 +634,8 @@
 				2EB07D3D221BEC6D00242F2D /* GasStation.swift in Sources */,
 				2EEC64E3231E9C5500055545 /* ResetPasswordVC.swift in Sources */,
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
+				2E9708962320DECC0022D55B /* CarouselCollectionViewCell.swift in Sources */,
+				2E20AA97231FC7F800EFB53D /* HomeVC.swift in Sources */,
 				2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */,
 				2EB07D3F221BEC6D00242F2D /* ApiCommunicator.swift in Sources */,
 				2EB07D3C221BEC6D00242F2D /* Validation.swift in Sources */,
@@ -584,6 +643,7 @@
 				2EA8F217231D2CE800D99D6D /* Utils.swift in Sources */,
 				2EB07D3A221BEC6D00242F2D /* UserData.swift in Sources */,
 				2EB07D40221BEC6D00242F2D /* Gasstation.swift in Sources */,
+				2EA186D0231F91B300871AE3 /* OTPvc.swift in Sources */,
 				2EB07D18221BEBC200242F2D /* AppDelegate.swift in Sources */,
 				2EB07D3B221BEC6D00242F2D /* Extensions.swift in Sources */,
 				2EEC64DA231E98F900055545 /* CustomTextfiled.swift in Sources */,
@@ -591,14 +651,18 @@
 				2EB07D3E221BEC6D00242F2D /* ApiManager.swift in Sources */,
 				2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */,
 				2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */,
+				2E9708992320DEF30022D55B /* GradientView.swift in Sources */,
 				2EB07D36221BEC6D00242F2D /* Strings.swift in Sources */,
 				2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */,
 				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
+				2E2CC2952326602500B7D044 /* HomeCell.swift in Sources */,
 				2EB07D34221BEC6D00242F2D /* Hud.swift in Sources */,
 				2EEC64E1231E9C3B00055545 /* LoginVC.swift in Sources */,
 				2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */,
 				2EEC64DF231E9C3B00055545 /* ForgotPassword.swift in Sources */,
+				2E9708972320DECC0022D55B /* Character.swift in Sources */,
 				2EEC64E0231E9C3B00055545 /* RegisterVC.swift in Sources */,
+				2E9708932320DE4D0022D55B /* WalkThroughVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +780,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -772,7 +836,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -790,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
 				INFOPLIST_FILE = InitialWork/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,7 +874,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
 				INFOPLIST_FILE = InitialWork/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

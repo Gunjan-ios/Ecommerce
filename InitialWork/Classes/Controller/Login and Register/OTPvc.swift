@@ -1,34 +1,42 @@
 //
-//  ResetPasswordVC.swift
+//  OTPvc.swift
 //  InitialWork
 //
-//  Created by Gunjan on 03/09/19.
+//  Created by Gunjan on 04/09/19.
 //  Copyright © 2019 Gunjan. All rights reserved.
 //
 
 import UIKit
 import TextFieldEffects
 import KOLocalizedString
+import JAPinView
 
-class ResetPasswordVC: ParentViewController,UITextFieldDelegate {
+class OTPvc: ParentViewController,UITextFieldDelegate  {
     
-    
-    @IBOutlet weak var txt_password: MyTextfiled!
-    @IBOutlet weak var txt_confirmPassword: MyTextfiled!
-
     @IBOutlet weak var btn_submit: UIButton!
     @IBOutlet weak var lbl_text: UILabel!
+    @IBOutlet weak var lblVerify: UILabel!
     @IBOutlet weak var blurview: UIView!
     @IBOutlet weak var blur: UIVisualEffectView!
+    @IBOutlet weak var txt_email: MyTextfiled!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var pinView: JAPinView!
+    
+    var formregister : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        txt_password.delegate = self
-        txt_confirmPassword.delegate = self
-        MadokaTextField.appearance().tintColor = TXT_CLUSER_COLOR
-        self.btn_submit.layer.cornerRadius = self.btn_submit.frame.size.height/2
-        self.blur.clipsToBounds = true;
-        self.blur.layer.cornerRadius = self.blur.frame.size.height/2
         settings()
+
+        pinView.onSuccessCodeEnter = { pin in
+//            self.alert(pin: pin)
+            print(pin)
+        }
+        
+        if formregister{
+            print("true")
+        }
+        
         // Do any additional setup after loading the view.
     }
     //––––––––––––––––––––––––––––––––––––––––
@@ -36,6 +44,12 @@ class ResetPasswordVC: ParentViewController,UITextFieldDelegate {
     //––––––––––––––––––––––––––––––––––––––––
     
     private func settings(){
+//        txt_email.delegate = self
+        
+        MadokaTextField.appearance().tintColor = TXT_CLUSER_COLOR
+        self.btn_submit.layer.cornerRadius = self.btn_submit.frame.size.height/2
+        self.blur.clipsToBounds = true;
+        self.blur.layer.cornerRadius = self.blur.frame.size.height/2
         self.localizedSettings()
         //        self.registerNotifications()
     }
@@ -47,28 +61,22 @@ class ResetPasswordVC: ParentViewController,UITextFieldDelegate {
     private func localizedSettings()
     {
         self.title = KOLocalizedString(Language.Login.ForgetTitle)
-        self.txt_password.placeholder = KOLocalizedString(Language.Login.Password)
-        self.txt_confirmPassword.placeholder = KOLocalizedString(Language.Login.ConfirmPassword)
-        lbl_text.text = KOLocalizedString(Language.ResetPassword
-            .title_text)
+//        self.txt_email.placeholder = KOLocalizedString(Language.Login.Email)
+        lbl_text.text = KOLocalizedString(Language.OTP.title_text)
+        lblVerify.text = KOLocalizedString(Language.OTP.txtverify)
         lbl_text.largeText()
-        self.btn_submit.setTitle(KOLocalizedString(Language.ResetPassword.btnreset), for: .normal)
+        lblVerify.changefontandsize(font: MediumFont, size: 17)
+//        email.text = KOLocalizedString(Language.OTP.txtverify)
+    
+        self.btn_submit.setTitle(KOLocalizedString(Language.Login.Submit), for: .normal)
         
     }
     private func validateFields() -> Bool {
         
         let validation = Validation()
         
-        if !self.txt_password.notEmpty() || !validation.isValidPassword(Password: (txt_password.text?.trim())!) {
-            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidpasswrod), type: AlertType.error, navBar: true)
-            return false
-        }
-        if !self.txt_confirmPassword.notEmpty() || !validation.isValidPassword(Password: (txt_confirmPassword.text?.trim())!) {
-            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidConfirmpasswrod), type: AlertType.error, navBar: true)
-            return false
-        }
-        if  txt_confirmPassword.text?.trim() != txt_password.text?.trim() {
-            self.showAlert(message:  KOLocalizedString(Strings.Login.ConfrimPasswrod), type: AlertType.error, navBar: true)
+        if !self.txt_email.notEmpty() || !validation.isValidEmail(email: txt_email.text!.trim()) {
+            self.showAlert(message:  KOLocalizedString(Strings.Login.invalidEmail), type: AlertType.error, navBar: false)
             return false
         }
         
@@ -80,11 +88,19 @@ class ResetPasswordVC: ParentViewController,UITextFieldDelegate {
     
     @IBAction func OnSubmitPressed(_ sender: Any)
     {
-        if validateFields()
-        {
-            Hud.showSuccess(message: Strings.Common.pushdata)
-            //            self.performSegue(withIdentifier: "LogintoHome", sender: self)
+        if formregister{
+            let Home = self.storyboard?.instantiateViewController(withIdentifier: Strings.Identifiers.HomeVC) as! HomeVC
+            self.navigationController?.pushViewController(Home, animated: true)
         }
+        else{
+            let Home = self.storyboard?.instantiateViewController(withIdentifier: Strings.Identifiers.ResetPasswordVC) as! ResetPasswordVC
+            self.navigationController?.pushViewController(Home, animated: true)
+        }
+//        if validateFields()
+//        {
+//            Hud.showSuccess(message: Strings.Common.pushdata)
+//            //            self.performSegue(withIdentifier: "LogintoHome", sender: self)
+//        }
     }
     @IBAction func onBackPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -96,18 +112,9 @@ class ResetPasswordVC: ParentViewController,UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        if textField == txt_password
-        {
-            txt_confirmPassword.becomeFirstResponder()
-        }
-        else if textField == txt_confirmPassword
-        {
-            txt_confirmPassword.resignFirstResponder()
-        }
+        textField.resignFirstResponder()
         return false
-
     }
-    
 
     /*
     // MARK: - Navigation

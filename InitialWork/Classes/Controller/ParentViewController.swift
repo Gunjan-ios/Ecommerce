@@ -36,7 +36,9 @@ class ParentViewController: UIViewController{
         }
         
         }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     @objc func networkStatusChanged(_ notification: Notification) {
 
         let status = Reach().connectionStatus()
@@ -52,7 +54,7 @@ class ParentViewController: UIViewController{
                 if self.APP.open_count == 2 {
                     self.APP.open_count = 0
 //                    Hud.showSuccess(message: Strings.Common.Connected)
-                    self.showAlert(message:  KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: true)
+                    self.showAlert(message:  KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: false)
                 }
                     })
         case .online(.wiFi):
@@ -62,7 +64,7 @@ class ParentViewController: UIViewController{
                 if self.APP.open_count == 2 {
                     self.APP.open_count = 0
 //                    Hud.showSuccess(message: Strings.Common.Connected)
-                    self.showAlert(message: KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: true)
+                    self.showAlert(message: KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: false)
                 }
                     })
         }

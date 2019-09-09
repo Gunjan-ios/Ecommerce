@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore your shopping experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le2-tO-i63">
-                                <rect key="frame" x="75.5" y="836" width="263" height="26"/>
+                                <rect key="frame" x="75.5" y="816" width="263" height="26"/>
                                 <fontDescription key="fontDescription" name="HindVadodara-Bold" family="Hind Vadodara" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="Vpq-gO-3uh" firstAttribute="centerX" secondItem="le2-tO-i63" secondAttribute="centerX" id="Sti-Ro-bL9"/>
                             <constraint firstItem="Vpq-gO-3uh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TwN-lo-Jw3"/>
                             <constraint firstItem="Vpq-gO-3uh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="plC-ka-WRX"/>
-                            <constraint firstItem="le2-tO-i63" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rVR-dP-Vrr"/>
+                            <constraint firstItem="le2-tO-i63" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="rVR-dP-Vrr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

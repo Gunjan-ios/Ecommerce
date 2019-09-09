@@ -36,3 +36,8 @@ class RegularFontButton: UIButton {
         titleLabel?.font = UIFont (name: RegularFont, size: UIFont.systemFontSize)
     }
 }
+class RoundedButton: UIButton {
+    override func awakeFromNib() {
+       layer.cornerRadius = frame.size.height/2
+    }
+}
