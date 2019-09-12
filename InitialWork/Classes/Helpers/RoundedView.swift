@@ -31,6 +31,28 @@ class ThemeColorButton: UIButton {
 //    == HindVadodara-SemiBold
 
 }
+class BlueThemeButton: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = frame.size.height/2
+        backgroundColor = THEME_COLOR
+        titleLabel?.font = UIFont (name: MediumFont, size: 12)
+        setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    
+}
+class AddTOCartButton: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = frame.size.height/2
+        layer.borderColor = THEME_COLOR.cgColor
+        layer.borderWidth = 1.0
+//        backgroundColor = THEME_COLOR
+//        titleLabel?.font = UIFont (name: MediumFont, size: 12)
+//        setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    
+}
 class RegularFontButton: UIButton {
     override func awakeFromNib() {
         titleLabel?.font = UIFont (name: RegularFont, size: UIFont.systemFontSize)

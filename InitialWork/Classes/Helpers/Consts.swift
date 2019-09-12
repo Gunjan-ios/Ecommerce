@@ -46,6 +46,17 @@ let FBImageUrl = "http://graph.facebook.com/%@/picture?type=square"
 
 
 //FONT NAME
+//        for fontFamilyName in UIFont.familyNames {
+//            print("family: \(fontFamilyName)\n")
+//
+//            for fontName in UIFont.fontNames(forFamilyName: fontFamilyName) {
+//                print("font: \(fontName)")
+//            }
+//        }
+
+//font: ChalkboardSE-Bold
+//font: ChalkboardSE-Light
+//font: ChalkboardSE-Regular
 
 let RegularFont = "HindVadodara-Regular"
 let MediumFont = "HindVadodara-Medium"

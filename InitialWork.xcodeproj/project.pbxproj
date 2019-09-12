@@ -16,6 +16,8 @@
 		2E571C41221BE63000CC7394 /* InitialWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C40221BE63000CC7394 /* InitialWorkTests.swift */; };
 		2E571C4C221BE63000CC7394 /* InitialWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E571C4B221BE63000CC7394 /* InitialWorkUITests.swift */; };
 		2E7FE21C22F2AA3900F36439 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FE21B22F2AA3900F36439 /* Okta.plist */; };
+		2E86B08D2328D11600569EB9 /* MyTabContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86B08C2328D11600569EB9 /* MyTabContoller.swift */; };
+		2E86B08F2329109E00569EB9 /* HProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86B08E2329109E00569EB9 /* HProductListCell.swift */; };
 		2E9708932320DE4D0022D55B /* WalkThroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708922320DE4D0022D55B /* WalkThroughVC.swift */; };
 		2E9708962320DECC0022D55B /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708942320DECC0022D55B /* CarouselCollectionViewCell.swift */; };
 		2E9708972320DECC0022D55B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9708952320DECC0022D55B /* Character.swift */; };
@@ -25,6 +27,7 @@
 		2EA8F217231D2CE800D99D6D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA8F216231D2CE800D99D6D /* Utils.swift */; };
 		2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */; };
 		2EAC79752223F00B00BAA8F6 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAC79742223F00B00BAA8F6 /* Network.framework */; };
+		2EAF20FA232A714D0045DF8B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF20F9232A714D0045DF8B /* CategoryCell.swift */; };
 		2EB07D15221BEBC200242F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0B221BEBC200242F2D /* Assets.xcassets */; };
 		2EB07D16221BEBC200242F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0C221BEBC200242F2D /* LaunchScreen.storyboard */; };
 		2EB07D17221BEBC200242F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB07D0E221BEBC200242F2D /* Main.storyboard */; };
@@ -91,6 +94,8 @@
 		2E571C4D221BE63000CC7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E7FE21B22F2AA3900F36439 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		2E7FE21D22F2AC5300F36439 /* OktaAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OktaAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E86B08C2328D11600569EB9 /* MyTabContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabContoller.swift; sourceTree = "<group>"; };
+		2E86B08E2329109E00569EB9 /* HProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HProductListCell.swift; sourceTree = "<group>"; };
 		2E9708922320DE4D0022D55B /* WalkThroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughVC.swift; sourceTree = "<group>"; };
 		2E9708942320DECC0022D55B /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E9708952320DECC0022D55B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		2EA8F216231D2CE800D99D6D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		2EAC79742223F00B00BAA8F6 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		2EAF20F9232A714D0045DF8B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		2EB07D0B221BEBC200242F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EB07D0D221BEBC200242F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EB07D0F221BEBC200242F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,7 +202,9 @@
 		2E2CC2932326600300B7D044 /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
+				2E86B08E2329109E00569EB9 /* HProductListCell.swift */,
 				2E2CC2942326602500B7D044 /* HomeCell.swift */,
+				2EAF20F9232A714D0045DF8B /* CategoryCell.swift */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 				2E2CC28F23265FD500B7D044 /* Home */,
 				2EEC64DB231E9C3A00055545 /* Login and Register */,
 				2EAAA62E221C219D00AE9B4D /* ParentViewController.swift */,
+				2E86B08C2328D11600569EB9 /* MyTabContoller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -633,9 +642,11 @@
 			files = (
 				2EB07D3D221BEC6D00242F2D /* GasStation.swift in Sources */,
 				2EEC64E3231E9C5500055545 /* ResetPasswordVC.swift in Sources */,
+				2E86B08D2328D11600569EB9 /* MyTabContoller.swift in Sources */,
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
 				2E9708962320DECC0022D55B /* CarouselCollectionViewCell.swift in Sources */,
 				2E20AA97231FC7F800EFB53D /* HomeVC.swift in Sources */,
+				2E86B08F2329109E00569EB9 /* HProductListCell.swift in Sources */,
 				2EB07D33221BEC6D00242F2D /* AlertManager.swift in Sources */,
 				2EB07D3F221BEC6D00242F2D /* ApiCommunicator.swift in Sources */,
 				2EB07D3C221BEC6D00242F2D /* Validation.swift in Sources */,
@@ -653,6 +664,7 @@
 				2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */,
 				2E9708992320DEF30022D55B /* GradientView.swift in Sources */,
 				2EB07D36221BEC6D00242F2D /* Strings.swift in Sources */,
+				2EAF20FA232A714D0045DF8B /* CategoryCell.swift in Sources */,
 				2EB07D38221BEC6D00242F2D /* Enums.swift in Sources */,
 				2EAAA62F221C219D00AE9B4D /* ParentViewController.swift in Sources */,
 				2E2CC2952326602500B7D044 /* HomeCell.swift in Sources */,

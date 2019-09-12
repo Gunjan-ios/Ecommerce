@@ -35,6 +35,13 @@ extension  UILabel {
     }
    
 }
+extension  UIButton {
+    func changeFontSize(font: String,size:CGFloat)  {
+        titleLabel?.font = UIFont (name: font, size: size)
+    }
+   
+    
+}
 extension String {
 	func capitalizingFirstLetter() -> String {
 		return prefix(1).uppercased() + dropFirst()
@@ -43,7 +50,16 @@ extension String {
 	mutating func capitalizeFirstLetter() {
 		self = self.capitalizingFirstLetter()
 	}
-
+    /// Apply strike font on text
+    func strikeThrough() -> NSAttributedString {
+        let attributeString = NSMutableAttributedString(string: self)
+        attributeString.addAttribute(
+            NSAttributedString.Key.strikethroughStyle,
+            value: 1,
+            range: NSRange(location: 0, length: attributeString.length))
+        
+        return attributeString
+    }
 	func trim() -> String {
 		return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
 	}

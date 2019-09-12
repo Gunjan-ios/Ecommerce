@@ -18,9 +18,19 @@ class Strings {
         static let OTPvc = "OTPvc"
         static let HomeVC  = "HomeVC"
          static let HomeCell  = "HomeCell"
+        static let CategoryCell  = "CategoryCell"
         static let ResetPasswordVC  = "ResetPasswordVC"
+        static let HProductListCell  = "HProductListCell"
         
     }
+    struct Segue {
+        static let   optToHome = "optToHome"
+//        static let HomeVC  = "HomeVC"
+//        static let HomeCell  = "HomeCell"
+//        static let ResetPasswordVC  = "ResetPasswordVC"
+        
+    }
+  
     struct Common {
         static let waiting = "Please wait.."
         static let defaultFailedMessage = "Failed. Please try again."

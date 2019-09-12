@@ -13,5 +13,5 @@ target 'InitialWork' do
         pod 'KOLocalizedString'
 	pod 'JAPinView', :git=> 'https://github.com/JayachandraA/JAPinView.git'
 	pod 'UPCarouselFlowLayout'
-	 pod 'SSCustomTabbar', '~> 2.0'
+	pod 'AARatingBar'
 end

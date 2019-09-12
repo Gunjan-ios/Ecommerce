@@ -89,8 +89,7 @@ class OTPvc: ParentViewController,UITextFieldDelegate  {
     @IBAction func OnSubmitPressed(_ sender: Any)
     {
         if formregister{
-            let Home = self.storyboard?.instantiateViewController(withIdentifier: Strings.Identifiers.HomeVC) as! HomeVC
-            self.navigationController?.pushViewController(Home, animated: true)
+            self.performSegue(withIdentifier: Strings.Segue.optToHome, sender: self)
         }
         else{
             let Home = self.storyboard?.instantiateViewController(withIdentifier: Strings.Identifiers.ResetPasswordVC) as! ResetPasswordVC
