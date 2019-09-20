@@ -18,18 +18,12 @@ class RoundedView: UIView {
     
 }
 class ThemeColorButton: UIButton {
-    
     override func awakeFromNib() {
         layer.cornerRadius = frame.size.height/2
-//        layer.borderColor = UIColor.black.cgColor
-//        layer.borderWidth = 1
         backgroundColor = YELLOW_COLOR
         titleLabel?.font = UIFont (name: BoldFont, size: 20.0)
         setTitleColor(UIColor.white, for: .normal)
     }
-//    == HindVadodara-Medium
-//    == HindVadodara-SemiBold
-
 }
 class BlueThemeButton: UIButton {
     override func awakeFromNib() {
@@ -38,8 +32,6 @@ class BlueThemeButton: UIButton {
         titleLabel?.font = UIFont (name: MediumFont, size: 12)
         setTitleColor(UIColor.white, for: .normal)
     }
-    
-    
 }
 class AddTOCartButton: UIButton {
     override func awakeFromNib() {
@@ -49,6 +41,18 @@ class AddTOCartButton: UIButton {
 //        backgroundColor = THEME_COLOR
 //        titleLabel?.font = UIFont (name: MediumFont, size: 12)
 //        setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    
+}
+class DeleteButton: UIButton {
+    override func awakeFromNib() {
+        layer.cornerRadius = frame.size.height/2
+        layer.borderColor = UIColor.red.cgColor
+        layer.borderWidth = 1.0
+        //        backgroundColor = THEME_COLOR
+        //        titleLabel?.font = UIFont (name: MediumFont, size: 12)
+        //        setTitleColor(UIColor.white, for: .normal)
     }
     
     

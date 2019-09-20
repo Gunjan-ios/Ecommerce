@@ -163,8 +163,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AARatingBar/AARatingBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JAPinView/JAPinView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KOLocalizedString/KOLocalizedString.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LIHAlert/LIHAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
@@ -175,8 +177,10 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AARatingBar/AARatingBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JAPinView/JAPinView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KOLocalizedString/KOLocalizedString.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LIHAlert/LIHAlert.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"

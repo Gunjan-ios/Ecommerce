@@ -53,6 +53,13 @@ class  Language {
         static let TTitle = "Buy Item"
         static let Tsubtitle = "Shop form thousand brands in the world in one application a throwaway prices"
     }
+    struct  ProductList{
+        static let Popular = "Popularity"
+        static let PriceLtoH = "Price - Low to High"
+        static let PriceHtoL = "Price - High to Low"
+        static let Sort_New = "Newest First"
+    
+    }
     struct Common {
         static let   ChooseOption = "Choose Option"
         static let  ChooseLanguage = "Choose Language"

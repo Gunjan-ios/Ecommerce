@@ -14,11 +14,21 @@ class HomeCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         layer.cornerRadius = 15.0
-        layer.borderColor = UIColor.gray.cgColor
-        layer.borderWidth = 2
-        layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: -1, height: 1)
-        layer.shadowRadius = 3
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 1
+     
+        
+//        layer.cornerRadius = 15.0
+//        layer.borderColor = UIColor.clear.cgColor
+//        layer.masksToBounds = true
+//        layer.shadowColor = UIColor.gray.cgColor
+//        layer.shadowOffset = CGSize(width: -1.0, height: 1.0)
+//        layer.shadowRadius = 2.0
+//        layer.shadowOpacity = 0.7
+//        layer.masksToBounds = false
+//        layer.shadowPath = UIBezierPath(roundedRect:bounds, cornerRadius:layer.cornerRadius).cgPath
+        
+        
     }
     
 }

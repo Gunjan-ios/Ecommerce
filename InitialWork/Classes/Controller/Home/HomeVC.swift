@@ -11,16 +11,16 @@ import UPCarouselFlowLayout
 
 class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
     
-    let Banner = [#imageLiteral(resourceName: "baner4"),#imageLiteral(resourceName: "baner1"),#imageLiteral(resourceName: "baner3"),#imageLiteral(resourceName: "baner2")]
-    
+     let Banner = [#imageLiteral(resourceName: "baner4"),#imageLiteral(resourceName: "baner1"),#imageLiteral(resourceName: "baner3"),#imageLiteral(resourceName: "baner2")]
+     let Brands = [#imageLiteral(resourceName: "brand_gionee"),#imageLiteral(resourceName: "brand_ebi"),#imageLiteral(resourceName: "brand_vivo"),#imageLiteral(resourceName: "brand_hanes"),#imageLiteral(resourceName: "brand_levis"),#imageLiteral(resourceName: "brand_hero"),#imageLiteral(resourceName: "brand_rolex"),#imageLiteral(resourceName: "brand_phoenix")]
+
      var items = [Product]()
      var list_category = [Category]()
 
     @IBOutlet weak var banner_collection: UICollectionView!
-    
     @IBOutlet weak var newArrivalCollection: UICollectionView!
-    
     @IBOutlet weak var categoryCollection: UICollectionView!
+    @IBOutlet weak var BrandCollection: UICollectionView!
     
     
     @IBOutlet weak var scrl_view: UIScrollView!
@@ -35,8 +35,9 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         newArrivalCollection.dataSource = self
         categoryCollection.delegate = self
         categoryCollection.dataSource = self
-        
-         self.items = self.createItems()
+        BrandCollection.delegate = self
+        BrandCollection.dataSource = self
+         self.items = ListProduct.init().DataLoad()
         self.list_category = self.createListCategory()
 
         scrl_view.contentSize = CGSize (width: self.view.frame.width, height: 1500)
@@ -47,6 +48,26 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         layout.sideItemScale = 0.8
         layout.scrollDirection = .horizontal
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 10)
+        
+        
+        
+        
+//        let noOfCellsInRow = 4
+//
+//        let BrandflowLayout = UICollectionViewFlowLayout()
+//
+//        let totalSpace = BrandflowLayout.sectionInset.left
+//            + BrandflowLayout.sectionInset.right
+//            + BrandflowLayout.minimumInteritemSpacing
+//
+//        let size = Int((BrandCollection.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+//
+//        BrandflowLayout.itemSize = CGSize (width: size, height: size)
+//        BrandflowLayout.scrollDirection = .vertical
+//
+//        BrandCollection.collectionViewLayout = BrandflowLayout
+        
+        
         // Do any additional setup after loading the view.
     }
     fileprivate func createItems() -> [Product] {
@@ -88,6 +109,9 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         if collectionView == banner_collection{
             return 4
         }
+        else if collectionView == BrandCollection{
+            return Brands.count
+        }
         else if collectionView == categoryCollection{
             return list_category.count
         }
@@ -95,13 +119,27 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
             return items.count
         }
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
+        flowayout!.sectionInset = UIEdgeInsets(top: 10  , left: 10  , bottom: 10, right: 10)
+        flowayout!.minimumInteritemSpacing = 10
+        flowayout!.minimumLineSpacing = 10
+        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0)  + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
+        let size:CGFloat = (BrandCollection.frame.size.width - space ) / 4
+        print(size)
+        return CGSize(width: size, height: size)
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == banner_collection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HomeCell, for: indexPath) as! HomeCell
             cell.img_banner.image = Banner[indexPath.row]
                return cell
+        }
+       else if collectionView == BrandCollection {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.BrandsCell, for: indexPath) as! BrandsCell
+            cell.img_brands.image = Brands[indexPath.row]
+            return cell
         }
         else if collectionView == categoryCollection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.CategoryCell, for: indexPath) as! CategoryCell
@@ -110,6 +148,25 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
             cell.img_Category.image = UIImage(named: Category.imageName)
             cell.name.text = Category.name
             return cell
+        }
+            
+        else if collectionView == newArrivalCollection{
+            if indexPath.row == 0 {
+                  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.FlashCell, for: indexPath) as! FlashCell
+                return cell
+            }
+            else{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HProductListCell, for: indexPath) as! HProductListCell
+                let Product = items[(indexPath as NSIndexPath).row]
+                print(Product)
+                cell.img_product.image = UIImage(named: Product.imageName)
+                cell.Actul_price.text = Product.actulPrice
+                cell.old_price.attributedText = Product.oldPrice.strikeThrough()
+                cell.name.text = Product.name
+                cell.product_rating.value = Product.productRating
+                //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
+                return cell
+            }
         }
         else    {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HProductListCell, for: indexPath) as! HProductListCell

@@ -33,28 +33,28 @@
                                 <rect key="frame" x="0.0" y="284" width="414" height="328"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ecommerce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLD-AC-tbW">
-                                        <rect key="frame" x="43" y="262" width="327" height="36"/>
+                                        <rect key="frame" x="43" y="238" width="327" height="36"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="zdG-3C-oMz">
-                                        <rect key="frame" x="87" y="0.0" width="240" height="257"/>
+                                        <rect key="frame" x="122" y="55" width="170" height="170"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="257" id="a97-Kj-Q0F"/>
+                                            <constraint firstAttribute="height" constant="170" id="a97-Kj-Q0F"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="trailing" secondItem="xLD-AC-tbW" secondAttribute="trailing" constant="-43" id="AVK-O5-nG1"/>
+                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="trailing" secondItem="xLD-AC-tbW" secondAttribute="trailing" constant="-78" id="AVK-O5-nG1"/>
                                     <constraint firstAttribute="width" constant="414" id="NOa-i2-ohN"/>
-                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="top" secondItem="Vpq-gO-3uh" secondAttribute="top" id="R0Z-ZK-Of5"/>
+                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="top" secondItem="Vpq-gO-3uh" secondAttribute="top" constant="55" id="R0Z-ZK-Of5"/>
                                     <constraint firstItem="zdG-3C-oMz" firstAttribute="centerX" secondItem="Vpq-gO-3uh" secondAttribute="centerX" id="VhM-K4-cza"/>
-                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="leading" secondItem="xLD-AC-tbW" secondAttribute="leading" constant="44" id="e07-AY-SnQ"/>
+                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="leading" secondItem="xLD-AC-tbW" secondAttribute="leading" constant="79" id="e07-AY-SnQ"/>
                                     <constraint firstAttribute="height" constant="328" id="oYv-SY-H1B"/>
-                                    <constraint firstItem="xLD-AC-tbW" firstAttribute="top" secondItem="zdG-3C-oMz" secondAttribute="bottom" constant="5" id="pDk-uO-9om"/>
-                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="leading" secondItem="Vpq-gO-3uh" secondAttribute="leading" constant="87" id="t3o-T4-Q5t"/>
+                                    <constraint firstItem="xLD-AC-tbW" firstAttribute="top" secondItem="zdG-3C-oMz" secondAttribute="bottom" constant="13" id="pDk-uO-9om"/>
+                                    <constraint firstItem="zdG-3C-oMz" firstAttribute="leading" secondItem="Vpq-gO-3uh" secondAttribute="leading" constant="122" id="t3o-T4-Q5t"/>
                                 </constraints>
                             </view>
                         </subviews>

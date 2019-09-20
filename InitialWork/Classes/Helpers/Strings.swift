@@ -21,6 +21,16 @@ class Strings {
         static let CategoryCell  = "CategoryCell"
         static let ResetPasswordVC  = "ResetPasswordVC"
         static let HProductListCell  = "HProductListCell"
+             static let FlashCell  = "FlashCell"
+          static let ListTableCell  = "ListTableCell"
+         static let BrandsCell  = "BrandsCell"
+         static let ListAdressCell  = "ListAdressCell"
+         static let EditAddressCell  = "EditAddressCell"
+         static let TotalOrderCell  = "TotalOrderCell"
+        static let PaymentTypeCell  = "PaymentTypeCell"
+         static let SubmitButton  = "SubmitButton"
+          static let AccountCell  = "AccountCell"
+        
         
     }
     struct Segue {
