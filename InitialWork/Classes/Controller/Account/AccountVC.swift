@@ -67,8 +67,51 @@ class AccountVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
             return cell
         }
     }
-    
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        switch [indexPath.section , indexPath.row ]{
+        case [0,0]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"MyOrderVC") as! MyOrderVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+            case [0,1]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"OfferVC") as! OfferVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+        case [0,2]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"NotificationVC") as! NotificationVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+        case [0,3]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"AddressBookVC") as! AddressBookVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+        case [2,0]:
+          DispatchQueue.main.async {
+            let alert = Utils.getAlertController(title: "Logout", message: "Are you sure want to logout?")
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+            }))
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            }))
+            self.present(alert, animated: true, completion: nil)
+                    }
+            break
+        case [1,1]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"SettingVC") as! SettingVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
+        default:
+            break
+        }
+        
+        
+//        if indexPath.section == 0 && indexPath.row == 0{
+//                    let view = self.storyboard?.instantiateViewController(withIdentifier:"MyOrderVC") as! MyOrderVC
+//                    self.navigationController?.pushViewController(view, animated: true)
+//        }
+        
+    }
+   
     /*
     // MARK: - Navigation
 

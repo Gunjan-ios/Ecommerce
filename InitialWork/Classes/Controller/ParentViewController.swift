@@ -109,9 +109,7 @@ class ParentViewController: UIViewController{
     }
     
     func showAlert(title: String?, message: String?, yesAction: UIAlertAction, noAction: UIAlertAction) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.actionSheet)
         alert.addAction(noAction)
         alert.addAction(yesAction)
         

@@ -72,10 +72,10 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
     }
     fileprivate func createItems() -> [Product] {
         let Products = [
-            Product.init (imageName: "2", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3, cartData: ""),
-            Product.init (imageName: "3", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4, cartData: ""),
-              Product.init (imageName: "4", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-            Product.init (imageName: "1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 2, cartData: "")
+            Product.init (imageName: "2", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
+            Product.init (imageName: "3", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4.0, cartData: ""),
+              Product.init (imageName: "4", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5.0, cartData: ""),
+            Product.init (imageName: "1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 2.0, cartData: "")
         ]
         return Products
     }
@@ -103,6 +103,25 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
             pageSize.height += layout.minimumLineSpacing
         }
         return pageSize
+    }
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.8)
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -163,7 +182,11 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
                 cell.Actul_price.text = Product.actulPrice
                 cell.old_price.attributedText = Product.oldPrice.strikeThrough()
                 cell.name.text = Product.name
-                cell.product_rating.value = Product.productRating
+                cell.product_rating.rating = Product.productRating
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                cell.img_product.isUserInteractionEnabled = true
+                 cell.img_product.addGestureRecognizer(tapGestureRecognizer)
+                
                 //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
                 return cell
             }
@@ -176,7 +199,8 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
             cell.Actul_price.text = Product.actulPrice
             cell.old_price.attributedText = Product.oldPrice.strikeThrough()
             cell.name.text = Product.name
-            cell.product_rating.value = Product.productRating
+
+            cell.product_rating.rating = Product.productRating
 //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
             return cell
         }

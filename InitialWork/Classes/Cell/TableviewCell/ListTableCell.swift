@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import AARatingBar
+import Cosmos
 
 class ListTableCell: UITableViewCell {
     @IBOutlet weak var img_product: UIImageView!
     @IBOutlet weak var name: mediumLabel!
     @IBOutlet weak var Actul_price: BoldLabel!
     @IBOutlet weak var old_price: mediumLabel!
-    @IBOutlet weak var product_rating: AARatingBar!
+    @IBOutlet weak var product_rating: CosmosView!
     @IBOutlet weak var btn_cart: AddTOCartButton!
     @IBOutlet weak var btn_compare: AddTOCartButton!
     @IBOutlet weak var btn_fav: AddTOCartButton!
@@ -44,8 +44,8 @@ class CartListProduct{
     
     func DataLoad() -> [Product] {
         let Products = [
-            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3, cartData: ""),
-            Product.init (imageName: "cate_fashion_women", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4, cartData: ""),
+            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
+            Product.init (imageName: "cate_fashion_women", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4.0, cartData: ""),
         ]
         return Products
         

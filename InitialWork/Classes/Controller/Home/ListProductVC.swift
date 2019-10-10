@@ -11,7 +11,10 @@ import JJFloatingActionButton
 
 class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource {
     var items = [Product]()
-  
+    var FilterData = [String]()
+    var SelectedFilterData = [String]()
+
+    @IBOutlet weak var filterView: UICollectionView!
     @IBOutlet weak var gridView: UICollectionView!
     @IBOutlet weak var ListView: UITableView!
     @IBOutlet weak var btn_chnages_view: UIButton!
@@ -25,8 +28,13 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         gridView.dataSource = self
         ListView.delegate = self
         ListView.dataSource = self
+        filterView.delegate = self
+        filterView.dataSource = self
 //        self.items = createItems()
          items = ListProduct.init().DataLoad()
+        FilterData = FilterSliderCell.filterItem
+        SelectedFilterData = FilterSliderCell.SelectedItem
+        
         actionButton.buttonColor = THEME_COLOR
         actionButton.buttonImageColor = YELLOW_COLOR
         actionButton.addItem(title: Language.ProductList.Popular, image: #imageLiteral(resourceName: "Popular")) { item in
@@ -42,62 +50,81 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
             self.showAlert(message: item.titleLabel.text!, type: .error, navBar: false)
         }
         actionButton.display(inViewController: self)
+        
+        DispatchQueue.main.async {
+            self.filterView.collectionViewLayout.invalidateLayout()
+        }
+        if let flowLayout = filterView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 200, height: 30)
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
        
         // Do any additional setup after loading the view.
     }
     
-    fileprivate func createItems() -> [Product] {
-        let Products = [
-            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3, cartData: ""),
-            Product.init (imageName: "cate_fashion_women", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4, cartData: ""),
-            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-             Product.init (imageName: "cate_laptop", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-              Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-               Product.init (imageName: "cate_kitchen", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-                Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-                 Product.init (imageName: "4", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5, cartData: ""),
-            Product.init (imageName: "1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 2, cartData: "")
-        ]
-        return Products
-    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == filterView
+        {
+            return FilterData.count
+        }else{
             return items.count
+
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-                  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HProductListCell, for: indexPath) as! HProductListCell
         
+        if collectionView == filterView{
+              let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.FilterSliderCell, for: indexPath) as! FilterSliderCell
+            cell.filterName.text = "\(FilterData[indexPath.row]) :"
+            cell.slectedFilter.text = SelectedFilterData[indexPath.row]
+             return cell
+            
+        }
+        else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HProductListCell, for: indexPath) as! HProductListCell
+            let Product = items[(indexPath as NSIndexPath).row]
+            //                print(Product)
+            cell.img_product.image = UIImage(named: Product.imageName)
+            cell.Actul_price.text = Product.actulPrice
+            cell.old_price.attributedText = Product.oldPrice.strikeThrough()
+            cell.name.text = Product.name
+            //        cell.product_rating.settings.updateOnTouch = false
+            //                cell.product_rating.rating = Product.productRating
+            
+            return cell
+        }
         
-                let Product = items[(indexPath as NSIndexPath).row]
-//                print(Product)
-                cell.img_product.image = UIImage(named: Product.imageName)
-                cell.Actul_price.text = Product.actulPrice
-                cell.old_price.attributedText = Product.oldPrice.strikeThrough()
-                cell.name.text = Product.name
-                cell.product_rating.value = Product.productRating
-        
-                return cell
            }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-        flowayout!.sectionInset = UIEdgeInsets(top: 10  , left: 10  , bottom: 10, right: 10)
-        flowayout!.minimumInteritemSpacing = 10
-        flowayout!.minimumLineSpacing = 10
-        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0)  + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (gridView.frame.size.width - space ) / 2
-        print(size)
-        return CGSize(width: size, height: 270)
+        if collectionView == gridView{
+            let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
+            flowayout!.sectionInset = UIEdgeInsets(top: 10  , left: 10  , bottom: 10, right: 10)
+            flowayout!.minimumInteritemSpacing = 10
+            flowayout!.minimumLineSpacing = 10
+            let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0)  + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
+            let size:CGFloat = (gridView.frame.size.width - space ) / 2
+            print(size)
+            return CGSize(width: size, height: 270)
+        }
+        else{
+
+            return CGSize(width: 0, height: 0)
+        }
+        
     }
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-           let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.ListTableCell) as! ListTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.ListTableCell) as! ListTableCell
         let Product = items[(indexPath as NSIndexPath).row]
         cell.img_product.image = UIImage(named: Product.imageName)
         cell.Actul_price.text = Product.actulPrice
@@ -106,7 +133,8 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         cell.Actul_price.changefontandsize(font: MediumFont, size: 18)
         cell.name.changefontandsize(font: BoldFont, size: 18)
         cell.old_price.changefontandsize(font: MediumFont, size: 18)
-        cell.product_rating.value = Product.productRating
+        print(Product.productRating)
+//        cell.product_rating.rating = Product.productRating
         
         return cell
     }
