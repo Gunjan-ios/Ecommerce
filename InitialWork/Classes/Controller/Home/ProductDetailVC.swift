@@ -39,8 +39,27 @@ class ProductDetailVC: ParentViewController,UITableViewDelegate,UITableViewDataS
         layout.scrollDirection = .horizontal
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 0)
         pageControl.numberOfPages = Banner.count
+        
         // Do any additional setup after loading the view.
     }
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == banner_collection{
             return Banner.count
@@ -54,6 +73,9 @@ class ProductDetailVC: ParentViewController,UITableViewDelegate,UITableViewDataS
         if collectionView == banner_collection{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HomeCell, for: indexPath) as! ProImageCell
             cell.img_product.image = Banner[indexPath.row]
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+            cell.img_product.isUserInteractionEnabled = true
+            cell.img_product.addGestureRecognizer(tapGestureRecognizer)
             return cell
         }
         else{

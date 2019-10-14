@@ -43,6 +43,10 @@ class Strings {
          static let HeaderCell  = "HeaderCell"
         static let OfferCell  = "OfferCell"
  static let SettingCell  = "SettingCell"
+         static let EmojiCell  = "EmojiCell"
+          static let EmojiCell1  = "EmojiCell1"
+          static let EmojiCell2  = "EmojiCell2"
+        
         
     }
     struct Segue {

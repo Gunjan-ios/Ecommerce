@@ -28,8 +28,7 @@ class ParentViewController: UIViewController{
         self.initAlerts()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 
-       if APP.open_count == 1
-       {
+       if APP.open_count == 1{
         APP.open_count = 0
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
@@ -52,7 +51,7 @@ class ParentViewController: UIViewController{
             print("Connected via WWAN")
             self.processingAlert?.hideAlert({ () -> () in
                 if self.APP.open_count == 2 {
-                    self.APP.open_count = 0
+                    self.APP.open_count = 1
 //                    Hud.showSuccess(message: Strings.Common.Connected)
                     self.showAlert(message:  KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: false)
                 }
@@ -62,7 +61,7 @@ class ParentViewController: UIViewController{
 
             self.processingAlert?.hideAlert({ () -> () in
                 if self.APP.open_count == 2 {
-                    self.APP.open_count = 0
+                    self.APP.open_count = 1
 //                    Hud.showSuccess(message: Strings.Common.Connected)
                     self.showAlert(message: KOLocalizedString(Language.Common.Connected), type: AlertType.success, navBar: false)
                 }

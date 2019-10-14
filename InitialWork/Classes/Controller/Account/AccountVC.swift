@@ -100,6 +100,10 @@ class AccountVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
             let view = self.storyboard?.instantiateViewController(withIdentifier:"SettingVC") as! SettingVC
             self.navigationController?.pushViewController(view, animated: true)
             break
+        case [1,2]:
+            let view = self.storyboard?.instantiateViewController(withIdentifier:"FeedBackVC") as! FeedBackVC
+            self.navigationController?.pushViewController(view, animated: true)
+            break
         default:
             break
         }

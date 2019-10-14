@@ -114,12 +114,12 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
         newImageView.addGestureRecognizer(tap)
         self.view.addSubview(newImageView)
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
     }
     
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
-        self.navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()
     }
@@ -183,9 +183,9 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
                 cell.old_price.attributedText = Product.oldPrice.strikeThrough()
                 cell.name.text = Product.name
                 cell.product_rating.rating = Product.productRating
-                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
-                cell.img_product.isUserInteractionEnabled = true
-                 cell.img_product.addGestureRecognizer(tapGestureRecognizer)
+//                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+//                cell.img_product.isUserInteractionEnabled = true
+//                 cell.img_product.addGestureRecognizer(tapGestureRecognizer)
                 
                 //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
                 return cell

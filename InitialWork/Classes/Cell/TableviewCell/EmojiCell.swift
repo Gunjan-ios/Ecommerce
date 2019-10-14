@@ -1,21 +1,22 @@
 //
-//  SettingCell.swift
+//  EmojiCell.swift
 //  InitialWork
 //
-//  Created by Gunjan on 09/10/19.
+//  Created by Gunjan on 14/10/19.
 //  Copyright © 2019 Gunjan. All rights reserved.
 //
 
 import UIKit
 
-class SettingCell: UITableViewCell {
-    
+class EmojiCell: UITableViewCell {
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var Name: BoldLabel!
-    @IBOutlet weak var Swt_status: UISwitch!
-    
-    
-    static var settingData = [Settings (name: "Order Notification", status: true),Settings (name: "Offer Notification", status: false)]
+
+    static var EmojiData = [FeedBackEmoji (name: "Store Ambience/Decor/Layout"),
+    FeedBackEmoji (name: "Product Range"),
+    FeedBackEmoji (name: "Product Availability"),
+    FeedBackEmoji (name: "Staff Attitude"),
+    FeedBackEmoji (name: "Product Knowlegde of staff"),]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +31,7 @@ class SettingCell: UITableViewCell {
         detailView.layer.shadowOpacity = 0.4
         detailView.layer.masksToBounds = false
     }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -37,7 +39,6 @@ class SettingCell: UITableViewCell {
     }
 
 }
-struct Settings {
+struct FeedBackEmoji {
     var name : String!
-    var status : Bool!
 }
