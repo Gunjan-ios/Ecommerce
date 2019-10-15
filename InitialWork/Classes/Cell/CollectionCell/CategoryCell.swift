@@ -14,9 +14,10 @@ class CategoryCell: UICollectionViewCell {
     
     static let Subcategories =  [
         //            SubCategory.init(imageName: "smartphone", Cat_name: "Mobiles", Subcategoryname: "Mobile phone,Tablets",isexpand:true),
-        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles", Subcategoryname: "Mobile phone,Tablets", isexpand: true, SubCategoryData: categories),
-        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles", Subcategoryname: "Mobile phone,Tablets", isexpand: true, SubCategoryData: categories),
-        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles", Subcategoryname: "Mobile phone,Tablets", isexpand: true, SubCategoryData: categories),]
+        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles,Computer", Subcategoryname: "Mobile phones,Power Banks, Cases & Cover", isexpand: true, SubCategoryData: categories),
+        SubCategory (imageName:"smartphone" , Cat_name: "Men's Fashion", Subcategoryname: "Clothing, Shoes, Wallets", isexpand: true, SubCategoryData: categories),
+        SubCategory (imageName:"smartphone" , Cat_name: "Women's Fashion", Subcategoryname: "Clothing, Watches, Handbags", isexpand: true, SubCategoryData: categories),
+        SubCategory (imageName:"smartphone" , Cat_name: "Home,Kitchen", Subcategoryname: "Furnitures, Home Decor, Home Improvement", isexpand: true, SubCategoryData: categories),]
 
     override func awakeFromNib() {
 //        layer.cornerRadius = 8.0
@@ -27,7 +28,7 @@ class CategoryCell: UICollectionViewCell {
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: -1.0, height: 1.0)
+        layer.shadowOffset = .zero
         layer.shadowRadius = 2.0
         layer.shadowOpacity = 0.4
         layer.masksToBounds = false

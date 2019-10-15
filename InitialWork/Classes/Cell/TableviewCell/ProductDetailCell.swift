@@ -28,7 +28,7 @@ class ProductDetailCell: UITableViewCell {
         //        detailView.layer.borderColor = UIColor.lightGray.cgColor
         detailView.layer.masksToBounds = true
         detailView.layer.shadowColor = UIColor.gray.cgColor
-        detailView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        detailView.layer.shadowOffset = .zero
         detailView.layer.shadowRadius = 3.0
         detailView.layer.shadowOpacity = 0.4
         detailView.layer.masksToBounds = false
@@ -64,9 +64,9 @@ class ProductOrder{
     
     func ProductListing() -> [OrderProduct] {
         let listorder = [
-            OrderProduct (name: "Apple Macbook Pro 12 with touch bar" , image_Product: #imageLiteral(resourceName: "iconVideoSelected"), Price: "$100", Quantity: "Quantity : 1"),
-            OrderProduct (name: "Apple Macbook Pro 12 with touch bar" , image_Product: #imageLiteral(resourceName: "cate_motorcycle"), Price: "$100", Quantity: "Quantity : 5"),
-            OrderProduct (name: "Apple Macbook Pro 12 with touch bar" , image_Product: #imageLiteral(resourceName: "cate_laptop"), Price: "$100", Quantity: "Quantity : 3"),]
+            OrderProduct (name: "Apple Macbook Air" , image_Product: #imageLiteral(resourceName: "P4"), Price: "$1100", Quantity: "Quantity : 1"),
+            OrderProduct (name: "Apple iPhone XR" , image_Product: #imageLiteral(resourceName: "p2"), Price: "$850", Quantity: "Quantity : 3"),
+            OrderProduct (name: "Brown Dial Analog Watch" , image_Product: #imageLiteral(resourceName: "watch"), Price: "$100", Quantity: "Quantity : 2"),]
         
         return listorder
     }

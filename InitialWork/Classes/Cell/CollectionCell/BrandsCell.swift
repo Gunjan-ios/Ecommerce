@@ -21,7 +21,7 @@ class BrandsCell: UICollectionViewCell {
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: -1.0, height: 1.0)
+        layer.shadowOffset = .zero
         layer.shadowRadius = 2.0
         layer.shadowOpacity = 0.4
         layer.masksToBounds = false

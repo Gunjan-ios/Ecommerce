@@ -26,7 +26,7 @@ class ListTableCell: UITableViewCell {
 //        DetailsView.layer.borderWidth = 0.1
         DetailsView.layer.masksToBounds = true
         DetailsView.layer.shadowColor = UIColor.gray.cgColor
-        DetailsView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        DetailsView.layer.shadowOffset = .zero
         DetailsView.layer.shadowRadius = 3.0
         DetailsView.layer.shadowOpacity = 0.4
         DetailsView.layer.masksToBounds = false
@@ -44,8 +44,8 @@ class CartListProduct{
     
     func DataLoad() -> [Product] {
         let Products = [
-            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
-            Product.init (imageName: "cate_fashion_women", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4.0, cartData: ""),
+            Product.init (imageName: "p1", name: "Apple iPhone XR", actulPrice: "$850", oldPrice: "$1150", productRating: 4.0, cartData: ""),
+            Product.init (imageName: "tshirt", name: "Men Polo Neck Multicolor T-Shirt", actulPrice: "$80", oldPrice: "$100", productRating: 4.0, cartData: ""),
         ]
         return Products
         

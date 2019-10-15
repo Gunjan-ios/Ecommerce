@@ -12,7 +12,7 @@ import UPCarouselFlowLayout
 
 class ProductDetailVC: ParentViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource {
     
-    let Banner = [#imageLiteral(resourceName: "P4"),#imageLiteral(resourceName: "P2"),#imageLiteral(resourceName: "P3"),#imageLiteral(resourceName: "P1")]
+    let Banner = [#imageLiteral(resourceName: "p1"),#imageLiteral(resourceName: "p2"),#imageLiteral(resourceName: "p3"),#imageLiteral(resourceName: "p4"),#imageLiteral(resourceName: "p5")]
     var items = [Product]()
     var ListPaymentType = [PaymentType]()
     

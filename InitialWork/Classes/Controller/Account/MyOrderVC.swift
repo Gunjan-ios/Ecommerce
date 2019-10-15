@@ -33,7 +33,8 @@ class MyOrderVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
         cell.Order.text = order.Order
         cell.Date.text = order.Date
         cell.name.text = order.name
-        cell.imageView?.image = order.image_payment
+        cell.img_product?.image = order.image_payment
+        
         cell.price.text = order.Price
         cell.paymentType.text = "(\(order.Selectedpayment ?? "" ))"
         cell.Approxtime.text = order.Time

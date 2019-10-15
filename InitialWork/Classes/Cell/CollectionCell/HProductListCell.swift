@@ -29,7 +29,7 @@ class HProductListCell: UICollectionViewCell {
 //        layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowOffset = .zero
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 0.4
         layer.masksToBounds = false
@@ -55,11 +55,11 @@ class ListProduct{
     
     func DataLoad() -> [Product] {
         let Products = [
-            Product.init (imageName: "fashion1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
-            Product.init (imageName: "girl1", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4.0, cartData: ""),
-            Product.init (imageName: "man1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
-            Product.init (imageName: "shoes2", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
-            Product.init (imageName: "cate_fashion_men", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
+            Product.init (imageName: "p1", name: "Apple iPhone XR", actulPrice: "$850", oldPrice: "$1150", productRating: 4.0, cartData: ""),
+            Product.init (imageName: "tshirt", name: "Men Polo Neck Multicolor T-Shirt", actulPrice: "$80", oldPrice: "$100", productRating: 4.0, cartData: ""),
+            Product.init (imageName: "kurti", name: "Choli and Dupatta Set", actulPrice: "$220", oldPrice: "$245", productRating: 3.0, cartData: ""),
+            Product.init (imageName: "watch", name: "Brown Dial Analog Watch", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
+            Product.init (imageName: "macbook", name: "Apple MacBook Air", actulPrice: "$2200", oldPrice: "$2500", productRating: 4.0, cartData: ""),
         ]
         return Products
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource
+class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var headerView: UIView!
     
@@ -72,6 +72,8 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         super.viewDidLoad()
         self.list_category = self.createListCategory()
         self.item = CategoryCell.Subcategories
+    
+
         // Do any additional setup after loading the view.
     }
 
@@ -93,16 +95,21 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return item.count
     }
- 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      
         if !item[section].isexpand{
             return 0
         }
         return list_category.count
     }
-    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if !item[section].isexpand{
+          return UIEdgeInsets.zero
+        }
+              return UIEdgeInsets(top: 10  , left: 0  , bottom: 10, right: 0)
+        }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         flowayout!.sectionInset = UIEdgeInsets(top: 10  , left: 10  , bottom: 10, right: 10)
         flowayout!.minimumInteritemSpacing = 10

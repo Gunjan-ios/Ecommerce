@@ -30,7 +30,7 @@ class OfferCell: UITableViewCell {
         //        detailView.layer.borderColor = UIColor.lightGray.cgColor
         detailsView.layer.masksToBounds = true
         detailsView.layer.shadowColor = UIColor.gray.cgColor
-        detailsView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        detailsView.layer.shadowOffset = .zero
         detailsView.layer.shadowRadius = 3.0
         detailsView.layer.shadowOpacity = 0.4
         detailsView.layer.masksToBounds = false

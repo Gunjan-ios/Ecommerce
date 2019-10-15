@@ -18,6 +18,7 @@ class MyOrderCell: UITableViewCell {
     @IBOutlet weak var Approxtime: mediumLabel!
     @IBOutlet weak var orderStatus: mediumLabel!
     
+    @IBOutlet weak var img_product: UIImageView!
     @IBOutlet weak var cancleOrder: UIButton!
     @IBOutlet weak var repeatOrder: UIButton!
     @IBOutlet weak var trackOrder: UIButton!
@@ -29,14 +30,14 @@ class MyOrderCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        // Initialization code
+        
         detailView.layer.cornerRadius = 4
-//        detailView.layer.borderWidth = 0.5
-//        detailView.layer.borderColor = UIColor.lightGray.cgColor
+//        detailView.layer.borderWidth = 1
+//        detailView.layer.borderColor = UIColor.darkGray.cgColor
         detailView.layer.masksToBounds = true
-        detailView.layer.shadowColor = UIColor.gray.cgColor
-        detailView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        detailView.layer.shadowRadius = 3.0
+        detailView.layer.shadowColor = UIColor.black.cgColor
+        detailView.layer.shadowOffset = .zero
+        detailView.layer.shadowRadius = 2.0
         detailView.layer.shadowOpacity = 0.4
         detailView.layer.masksToBounds = false
         
@@ -44,6 +45,9 @@ class MyOrderCell: UITableViewCell {
         repeatOrder.layer.cornerRadius = 4
         trackOrder.layer.cornerRadius = 4
         
+//        cancleOrder.layer.borderWidth =  0.3
+//        repeatOrder.layer.borderWidth =  0.3
+//        trackOrder.layer.borderWidth =  0.3
         
         
     }
@@ -70,15 +74,14 @@ class OrderData{
     
     func OrderListing() -> [MyOrder] {
         let listorder = [
-            MyOrder (name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconHomeSelected"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "Approx Delivery Time : 3 Days from today", PaymentStatus: 0),
-            MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconProfileSelected"), Selectedpayment: "Patym", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 1),
-            MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconFavoriteSelected"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 2),
-            MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconVideoSelected"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 3),
-            MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconVideoSelected"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 0),
-        MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconVideoSelected"), Selectedpayment: "Patym", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 1),
-        MyOrder(name: "Apple Macbook Pro 12 with touch bar", image_payment: #imageLiteral(resourceName: "iconVideoSelected"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$100", Time: "", PaymentStatus: 2),]
+            MyOrder (name: "Apple Macbook Air", image_payment: #imageLiteral(resourceName: "P4"), Selectedpayment: "Cash on Delivery", Order: "#791235565254566A2", Date: "24 April 2019", Price: "$1100", Time: "", PaymentStatus: 3),
+            MyOrder(name: "Men Polo Neck Multicolor T-Shirt", image_payment: #imageLiteral(resourceName: "tshirt"), Selectedpayment: "Patym", Order: "#451235563454666A2", Date: "2 April 2019", Price: "$80", Time: "", PaymentStatus: 1),
+            MyOrder(name: "Choli and Dupatta Set", image_payment: #imageLiteral(resourceName: "kurti"), Selectedpayment: "Cash on Delivery", Order: "#901235563254566A2", Date: "3 June 2019", Price: "$220", Time: "", PaymentStatus: 2),
+            MyOrder(name: "Brown Dial Analog Watch", image_payment: #imageLiteral(resourceName: "watch"), Selectedpayment: "Cash on Delivery", Order: "#60129685254566A2", Date: "15 May 2019", Price: "$100", Time: "Approx Delivery Time : 3 Days from today", PaymentStatus: 0),]
         
         return listorder
     }
     
 }
+
+

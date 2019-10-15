@@ -22,7 +22,7 @@ class FilterSliderCell: UICollectionViewCell {
         layer.borderWidth = 0.1
         layer.masksToBounds = true
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowOffset = .zero
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 0.4
         layer.masksToBounds = false

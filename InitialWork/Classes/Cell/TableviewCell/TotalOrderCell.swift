@@ -20,7 +20,7 @@ class TotalOrderCell: UITableViewCell {
 //        detailView.layer.borderColor = UIColor.lightGray.cgColor
                 detailView.layer.masksToBounds = true
                 detailView.layer.shadowColor = UIColor.gray.cgColor
-                detailView.layer.shadowOffset = CGSize(width: -1, height: 1)
+                detailView.layer.shadowOffset = .zero
                 detailView.layer.shadowRadius = 3.0
                 detailView.layer.shadowOpacity = 0.4
                 detailView.layer.masksToBounds = false
