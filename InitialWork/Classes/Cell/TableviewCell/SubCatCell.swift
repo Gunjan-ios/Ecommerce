@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout  {
+class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource  {
    
     @IBOutlet weak var subcategoryCollection: UICollectionView!
     var item = [SubCategory]()
@@ -18,7 +18,8 @@ class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewData
         super.awakeFromNib()
         subcategoryCollection.delegate = self
         subcategoryCollection.dataSource = self
-        self.item = CategoryCell.Subcategories
+        
+        self.list_category = CategoryCell.categories
         
 //        subcategoryCollection.reloadData()
 //        DispatchQueue.main.async {
@@ -39,7 +40,9 @@ class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return list_category.count
     }
-    
+   
+ 
+
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
 //        flowayout!.sectionInset = UIEdgeInsets(top: 10  , left: 10  , bottom: 10, right: 10)
@@ -51,6 +54,7 @@ class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewData
 //        return CGSize(width: size, height: 110)
 //    }
 //
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.CategoryCell, for: indexPath) as! CategoryCell
         let Category = list_category[(indexPath as NSIndexPath).row]

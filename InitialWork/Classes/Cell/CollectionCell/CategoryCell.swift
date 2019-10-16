@@ -13,11 +13,24 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var name : mediumLabel!
     
     static let Subcategories =  [
-        //            SubCategory.init(imageName: "smartphone", Cat_name: "Mobiles", Subcategoryname: "Mobile phone,Tablets",isexpand:true),
-        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles,Computer", Subcategoryname: "Mobile phones,Power Banks, Cases & Cover", isexpand: true, SubCategoryData: categories),
-        SubCategory (imageName:"smartphone" , Cat_name: "Men's Fashion", Subcategoryname: "Clothing, Shoes, Wallets", isexpand: true, SubCategoryData: categories),
-        SubCategory (imageName:"smartphone" , Cat_name: "Women's Fashion", Subcategoryname: "Clothing, Watches, Handbags", isexpand: true, SubCategoryData: categories),
-        SubCategory (imageName:"smartphone" , Cat_name: "Home,Kitchen", Subcategoryname: "Furnitures, Home Decor, Home Improvement", isexpand: true, SubCategoryData: categories),]
+       
+        SubCategory (imageName:"smartphone" , Cat_name: "Mobiles,Computer", Subcategoryname: "Mobile phones, Power Banks, Cases & Cover", isexpand: true, SubCategoryData: [Category.init(imageName: "p1", name:"Mobiles"),Category.init (imageName: "PowerBanks", name: "Power Banks"),Category.init (imageName: "Cases", name: "Cases & Cover")]),
+        SubCategory (imageName:"MenFashion" , Cat_name: "Men's Fashion", Subcategoryname: "Clothing, Shoes, Wallets", isexpand: true, SubCategoryData: [Category.init(imageName: "MenFashion", name:"Clothing"),Category.init (imageName: "Shoes", name: "Shoes"),Category.init (imageName: "Wallets", name: "Wallets")]),
+        SubCategory (imageName:"WomenFashion" , Cat_name: "Women's Fashion", Subcategoryname: "Clothing, Watches, Handbags", isexpand: true, SubCategoryData: [Category.init(imageName: "WomenFashion", name:"Clothing"),Category.init (imageName: "Watches", name: "Watches"),Category.init (imageName: "Handbags", name: "Handbags")]),
+        SubCategory (imageName:"kitchen" , Cat_name: "Home,Kitchen", Subcategoryname: "Furnitures, Home Decor, Home Improvement", isexpand: true, SubCategoryData: [Category.init(imageName: "fur", name:"Furnitures"),Category.init (imageName: "Home Decor", name: "Home Decor"),Category.init (imageName: "garden", name: "Garden & Outdoors")]),]
+    
+  static  let categories =   [
+        Category.init (imageName:"smartphone" , name: "Mobiles"),
+        Category.init (imageName: "cate_fashion_men", name: "Men's Fashion"),
+        Category.init (imageName:"cate_fashion_women" , name: "Women's Fashion"),
+        Category.init (imageName: "cate_tv", name: "TVs, ACs & Appliances"),
+        Category.init (imageName: "cate_laptop", name: "Laptops & PCs"),
+        Category.init (imageName: "cate_kitchen", name: "Home & Kitchen"),
+        Category.init (imageName: "cate_toy_shop", name: "Kids & Toys Store"),
+        Category.init (imageName:"cate_beauty" , name: "Beauty & Grooming"),
+        Category.init (imageName: "cate_motorcycle", name: "Cars & Bikes")
+    ]
+
 
     override func awakeFromNib() {
 //        layer.cornerRadius = 8.0

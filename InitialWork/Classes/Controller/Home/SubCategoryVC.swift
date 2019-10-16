@@ -8,55 +8,57 @@
 
 import UIKit
 
-class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
+class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate
 {
     @IBOutlet weak var headerView: UIView!
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        if indexPath.section == 0 {
-//               let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.HeaderCell) as! HeaderCell
-//            cell.name.text = item[indexPath.row].Cat_name
-//            cell.detailsData.text = item[indexPath.row].Subcategoryname
-//            cell.img_category.image = UIImage (named: item[indexPath.row].imageName)
-//            return cell
-//        }
-//        else{
-//            let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.SubCatCell) as! SubCatCell
-//            return cell
-//        }
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if item[indexPath.section].isexpand == true{
-//            return 75
-//        }
-//        else{
-//            return 75
-//        }
-//    }
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return CategoryCell.Subcategories.count
-//    }
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        if indexPath.section == 0 {
+               let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.HeaderCell) as! HeaderCell
+            cell.name.text = item[indexPath.row].Cat_name
+            cell.detailsData.text = item[indexPath.row].Subcategoryname
+            cell.img_category.image = UIImage (named: item[indexPath.row].imageName)
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.SubCatCell) as! SubCatCell
+            return cell
+        }
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if item[indexPath.section].isexpand == true{
+            return 75
+        }
+        else{
+            return 75
+        }
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return item.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return item.count
 //        if item[section].isexpand == true{
 //            return 2
 //        }else{
 //            return 1
 //        }
-//    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        if item[indexPath.section].isexpand == true {
-//            item[indexPath.section].isexpand = false
-//            let sections = IndexSet.init(integer: indexPath.row)
-//            tableView.reloadSections(sections, with: .none)
-//
-//        }else{
-//            item[indexPath.section].isexpand = true
-//        }
-//    }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if item[indexPath.section].isexpand == true {
+            item[indexPath.section].isexpand = false
+            let sections = IndexSet.init(integer: indexPath.row)
+            tableView.reloadSections(sections, with: .none)
+
+        }else{
+            item[indexPath.section].isexpand = true
+        }
+    }
     
     @IBOutlet weak var bottomview: NSLayoutConstraint!
     @IBOutlet weak var Collectionheight: NSLayoutConstraint!
@@ -70,28 +72,14 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.list_category = self.createListCategory()
+     
         self.item = CategoryCell.Subcategories
     
 
         // Do any additional setup after loading the view.
     }
 
-    fileprivate func createListCategory() -> [Category] {
-         
-        let categories =   [
-                             Category.init (imageName:"smartphone" , name: "Mobiles"),
-                             Category.init (imageName: "cate_fashion_men", name: "Men's Fashion"),
-                             Category.init (imageName:"cate_fashion_women" , name: "Women's Fashion"),
-                             Category.init (imageName: "cate_tv", name: "TVs, ACs & Appliances"),
-                             Category.init (imageName: "cate_laptop", name: "Laptops & PCs"),
-                             Category.init (imageName: "cate_kitchen", name: "Home & Kitchen"),
-                             Category.init (imageName: "cate_toy_shop", name: "Kids & Toys Store"),
-                             Category.init (imageName:"cate_beauty" , name: "Beauty & Grooming"),
-                             Category.init (imageName: "cate_motorcycle", name: "Cars & Bikes")
-        ]
-        return categories
-    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return item.count
     }
@@ -99,7 +87,7 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         if !item[section].isexpand{
             return 0
         }
-        return list_category.count
+        return item[section].SubCategoryData.count
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -122,10 +110,11 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.CategoryCell, for: indexPath) as! CategoryCell
-        let Category = list_category[(indexPath as NSIndexPath).row]
-        print(Category)
-        cell.img_Category.image = UIImage(named: Category.imageName)
-        cell.name.text = Category.name
+     
+        let subcatData = item[indexPath.section].SubCategoryData[indexPath.row]
+        print(subcatData)
+        cell.img_Category.image = UIImage(named: subcatData.imageName)
+        cell.name.text = subcatData.name
         return cell
     }
    
@@ -156,7 +145,7 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         print(sender.tag)
         let Section = sender.tag
         var indexpaths = [IndexPath]()
-        for r in list_category.indices{
+        for r in item[Section].SubCategoryData.indices{
             print(Section,r)
             let indexpath = IndexPath (row: r, section: Section)
             indexpaths.append(indexpath)

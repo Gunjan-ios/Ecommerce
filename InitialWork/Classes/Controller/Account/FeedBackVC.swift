@@ -41,8 +41,8 @@ class FeedBackVC: ParentViewController,UITableViewDelegate,UITableViewDataSource
             
             let txtview = cell?.viewWithTag(2)
             txtview?.layer.cornerRadius = 8.0
-            txtview?.layer.borderWidth = 1
-            txtview?.layer.borderColor = UIColor.gray.cgColor
+            txtview?.layer.borderWidth = 0.5
+            txtview?.layer.borderColor = UIColor.lightGray.cgColor
             
             let btn = cell?.viewWithTag(3)
             btn?.layer.cornerRadius = 8.0
