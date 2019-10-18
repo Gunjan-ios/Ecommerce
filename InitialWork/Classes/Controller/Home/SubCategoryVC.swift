@@ -130,6 +130,10 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
             headerView.Subcategoryname.text = self.item [indexPath.section].Subcategoryname
             headerView.img_Category.image = UIImage(named:self.item[indexPath.section].imageName)
             headerView.btn_section.tag = indexPath.section
+            if indexPath.section == 0{
+                headerView.btn_section.setImage( #imageLiteral(resourceName: "up-arrow") , for: .normal)
+            }
+//             headerView.btn_section.setImage(item[indexPath.section].isexpand ? #imageLiteral(resourceName: "down-arrow") : #imageLiteral(resourceName: "up-arrow") , for: .normal)
           
             return headerView
         case UICollectionView.elementKindSectionFooter:

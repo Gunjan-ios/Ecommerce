@@ -22,13 +22,13 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
     @IBOutlet weak var categoryCollection: UICollectionView!
     @IBOutlet weak var BrandCollection: UICollectionView!
     
-    
+
     @IBOutlet weak var scrl_view: UIScrollView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+      
         banner_collection.delegate = self
         banner_collection.dataSource = self
         newArrivalCollection.delegate = self
@@ -48,9 +48,6 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         layout.sideItemScale = 0.8
         layout.scrollDirection = .horizontal
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 10)
-        
-        
-        
         
 //        let noOfCellsInRow = 4
 //

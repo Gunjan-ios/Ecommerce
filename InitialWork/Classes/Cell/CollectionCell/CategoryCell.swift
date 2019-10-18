@@ -15,9 +15,9 @@ class CategoryCell: UICollectionViewCell {
     static let Subcategories =  [
        
         SubCategory (imageName:"smartphone" , Cat_name: "Mobiles,Computer", Subcategoryname: "Mobile phones, Power Banks, Cases & Cover", isexpand: true, SubCategoryData: [Category.init(imageName: "p1", name:"Mobiles"),Category.init (imageName: "PowerBanks", name: "Power Banks"),Category.init (imageName: "Cases", name: "Cases & Cover")]),
-        SubCategory (imageName:"MenFashion" , Cat_name: "Men's Fashion", Subcategoryname: "Clothing, Shoes, Wallets", isexpand: true, SubCategoryData: [Category.init(imageName: "MenFashion", name:"Clothing"),Category.init (imageName: "Shoes", name: "Shoes"),Category.init (imageName: "Wallets", name: "Wallets")]),
-        SubCategory (imageName:"WomenFashion" , Cat_name: "Women's Fashion", Subcategoryname: "Clothing, Watches, Handbags", isexpand: true, SubCategoryData: [Category.init(imageName: "WomenFashion", name:"Clothing"),Category.init (imageName: "Watches", name: "Watches"),Category.init (imageName: "Handbags", name: "Handbags")]),
-        SubCategory (imageName:"kitchen" , Cat_name: "Home,Kitchen", Subcategoryname: "Furnitures, Home Decor, Home Improvement", isexpand: true, SubCategoryData: [Category.init(imageName: "fur", name:"Furnitures"),Category.init (imageName: "Home Decor", name: "Home Decor"),Category.init (imageName: "garden", name: "Garden & Outdoors")]),]
+        SubCategory (imageName:"MenFashion" , Cat_name: "Men's Fashion", Subcategoryname: "Clothing, Shoes, Wallets", isexpand: false, SubCategoryData: [Category.init(imageName: "MenFashion", name:"Clothing"),Category.init (imageName: "Shoes", name: "Shoes"),Category.init (imageName: "Wallets", name: "Wallets")]),
+        SubCategory (imageName:"WomenFashion" , Cat_name: "Women's Fashion", Subcategoryname: "Clothing, Watches, Handbags", isexpand: false, SubCategoryData: [Category.init(imageName: "WomenFashion", name:"Clothing"),Category.init (imageName: "Watches", name: "Watches"),Category.init (imageName: "Handbags", name: "Handbags")]),
+        SubCategory (imageName:"kitchen" , Cat_name: "Home,Kitchen", Subcategoryname: "Furnitures, Home Decor, Home Improvement", isexpand: false, SubCategoryData: [Category.init(imageName: "fur", name:"Furnitures"),Category.init (imageName: "Home Decor", name: "Home Decor"),Category.init (imageName: "garden", name: "Garden & Outdoors")]),]
     
   static  let categories =   [
         Category.init (imageName:"smartphone" , name: "Mobiles"),
