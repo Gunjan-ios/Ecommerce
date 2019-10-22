@@ -32,6 +32,7 @@ class ReturnView: UIView,OrderToReturnDelegate {
     
     override func awakeFromNib() {
         topView.addBorder(toSide: .Bottom, withColor: UIColor.gray.cgColor, andThickness: 1)
+      
         CornerView.layer.cornerRadius = 8
         CornerView.layer.borderWidth = 1
         CornerView.layer.borderColor = UIColor.gray.cgColor
@@ -43,33 +44,30 @@ class ReturnView: UIView,OrderToReturnDelegate {
         txtComment.layer.cornerRadius = 8
         
     }
+    
     class func instanceFromNib(message : String?,retunView : Bool?) -> ReturnView? {
-        if let alert = UINib(nibName: "ReturnView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ReturnView{
+        if let alert = UINib(nibName: Strings.Identifiers.ReturnView, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ReturnView{
             alert.frame = CGRect (x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-       
             if message != nil {
                 alert.messagelable.text = message
             }
             if retunView == true {
-                alert.btnReason.setTitle("Select Reason For Return Item", for: .normal)
+                alert.btnReason.setTitle(Strings.ReturnView.reasonlabel, for: .normal)
                 alert.btnReason.isHidden = false
                 alert.btnHeight.constant = 34
                 alert.btnReason.layer.borderWidth = 1
                 alert.btnReason.layer.borderColor = UIColor.gray.cgColor
-               alert.btnReason.layer.cornerRadius = 4
+                alert.btnReason.layer.cornerRadius = 4
                 alert.stp_qty.isHidden = false
                 alert.starView.isHidden = true
             }
             else{
                 alert.btnHeight.constant = 0
-
                 alert.btnReason.isHidden = true
                 alert.btnReason.setTitle("", for: .normal)
                 alert.stp_qty.isHidden = true
                 alert.starView.isHidden = false
-                
             }
-
             return alert
         }
         return nil

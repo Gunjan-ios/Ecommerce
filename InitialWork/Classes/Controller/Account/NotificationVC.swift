@@ -9,7 +9,9 @@
 import UIKit
 
 class NotificationVC: ParentViewController,UITableViewDelegate,UITableViewDataSource  {
-@IBOutlet weak var  NotificationList: UITableView!
+   
+    @IBOutlet weak var  NotificationList: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationList.dataSource = self

@@ -41,19 +41,19 @@ class MyOrderVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
         
         switch order.PaymentStatus {
         case 0:
-             cell.orderStatus.text = "Pending"
+             cell.orderStatus.text = Strings.OrderType.Pending
              cell.orderStatus.textColor = YELLOW_COLOR
             break
         case 1:
-            cell.orderStatus.text = "Completed"
+            cell.orderStatus.text = Strings.OrderType.Completed
             cell.orderStatus.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             break
         case 2:
-            cell.orderStatus.text = "Cancelled"
+            cell.orderStatus.text = Strings.OrderType.Cancelled
             cell.orderStatus.textColor = .orange
             break
         case 3:
-            cell.orderStatus.text = "Denied"
+            cell.orderStatus.text = Strings.OrderType.Denied
             cell.orderStatus.textColor = .red
             break
         default:
@@ -74,7 +74,7 @@ class MyOrderVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.listOrder.deselectRow(at: indexPath, animated: true)
         print("Log")
-        let view = self.storyboard?.instantiateViewController(withIdentifier:"OrderDetailVC") as! OrderDetailVC
+        let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.OrderDetailVC) as! OrderDetailVC
         let order = orderItems[indexPath.row]
         view.PaymentStatus = order.PaymentStatus
         view.orderDate = order.Date

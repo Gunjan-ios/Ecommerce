@@ -18,7 +18,6 @@ class SubCatCell:  UITableViewCell,UICollectionViewDelegate,UICollectionViewData
         super.awakeFromNib()
         subcategoryCollection.delegate = self
         subcategoryCollection.dataSource = self
-        
         self.list_category = CategoryCell.categories
         
 //        subcategoryCollection.reloadData()

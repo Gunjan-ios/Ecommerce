@@ -37,7 +37,7 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         categoryCollection.dataSource = self
         BrandCollection.delegate = self
         BrandCollection.dataSource = self
-         self.items = ListProduct.init().DataLoad()
+        self.items = ListProduct.init().DataLoad()
         self.list_category = self.createListCategory()
 
         scrl_view.contentSize = CGSize (width: self.view.frame.width, height: 1500)
@@ -49,33 +49,9 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
         layout.scrollDirection = .horizontal
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 10)
         
-//        let noOfCellsInRow = 4
-//
-//        let BrandflowLayout = UICollectionViewFlowLayout()
-//
-//        let totalSpace = BrandflowLayout.sectionInset.left
-//            + BrandflowLayout.sectionInset.right
-//            + BrandflowLayout.minimumInteritemSpacing
-//
-//        let size = Int((BrandCollection.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
-//
-//        BrandflowLayout.itemSize = CGSize (width: size, height: size)
-//        BrandflowLayout.scrollDirection = .vertical
-//
-//        BrandCollection.collectionViewLayout = BrandflowLayout
-        
-        
         // Do any additional setup after loading the view.
     }
-    fileprivate func createItems() -> [Product] {
-        let Products = [
-            Product.init (imageName: "2", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 3.0, cartData: ""),
-            Product.init (imageName: "3", name: "Apple Airbook", actulPrice: "$200", oldPrice: "$220", productRating: 4.0, cartData: ""),
-              Product.init (imageName: "4", name: "Apple Macbook", actulPrice: "$500", oldPrice: "$550", productRating: 5.0, cartData: ""),
-            Product.init (imageName: "1", name: "Apple Macbook", actulPrice: "$100", oldPrice: "$110", productRating: 2.0, cartData: "")
-        ]
-        return Products
-    }
+
     
     fileprivate func createListCategory() -> [Category] {
         let categories =  [ Category.init (imageName: "all_category", name: "All Categories"),
@@ -180,11 +156,12 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
                 cell.old_price.attributedText = Product.oldPrice.strikeThrough()
                 cell.name.text = Product.name
                 cell.product_rating.rating = Product.productRating
+                //Image ZOOM
+                
 //                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
 //                cell.img_product.isUserInteractionEnabled = true
 //                 cell.img_product.addGestureRecognizer(tapGestureRecognizer)
-                
-                //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
+//            cell.btn_cart.setTitle(Product.cartData, for: .normal)
                 return cell
             }
         }

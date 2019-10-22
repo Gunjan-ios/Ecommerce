@@ -60,16 +60,13 @@ class FilterVC: ParentViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if tableView == FliterProduct{
-            
             if let index = self.FliterProduct.indexPathForSelectedRow{
-                print(index.row)
-                let currentCell = tableView.cellForRow(at: index) as! UITableViewCell
-                print(currentCell.textLabel!.text as Any)
-                if currentCell.imageView?.image == #imageLiteral(resourceName: "check"){
-                    currentCell.imageView?.image = #imageLiteral(resourceName: "uncheck")
+                let currentCell = tableView.cellForRow(at: index)
+                if currentCell!.imageView?.image == #imageLiteral(resourceName: "check"){
+                    currentCell!.imageView?.image = #imageLiteral(resourceName: "uncheck")
                 }
                 else{
-                    currentCell.imageView?.image = #imageLiteral(resourceName: "check")
+                    currentCell?.imageView?.image = #imageLiteral(resourceName: "check")
                 }
             }
         }

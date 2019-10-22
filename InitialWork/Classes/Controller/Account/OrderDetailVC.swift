@@ -16,31 +16,26 @@ class OrderDetailVC: ParentViewController,UITableViewDelegate,UITableViewDataSou
   func ReasonReturnProceed(Reason: Bool) {
         let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         // create an action
-        let firstAction: UIAlertAction = UIAlertAction(title: "Dead On Arrival", style: .default) { action -> Void in
-            print("First Action pressed")
-            self.OrderToReturn.ReasonSelected(Reason: "Dead On Arrival")
+        let firstAction: UIAlertAction = UIAlertAction(title: Strings.ReturnView.reasontitle1, style: .default) { action -> Void in
+            self.OrderToReturn.ReasonSelected(Reason: Strings.ReturnView.reasontitle1)
         }
         
-        let secondAction: UIAlertAction = UIAlertAction(title: "Faulty,Please supply details", style: .default) { action -> Void in
-            self.OrderToReturn.ReasonSelected(Reason: "Faulty,Please supply details")
-            print("Second Action pressed")
+        let secondAction: UIAlertAction = UIAlertAction(title: Strings.ReturnView.reasontitle2, style: .default) { action -> Void in
+            self.OrderToReturn.ReasonSelected(Reason: Strings.ReturnView.reasontitle2)
         }
-        let thirdAction: UIAlertAction = UIAlertAction(title: "Order Error", style: .default) { action -> Void in
-            self.OrderToReturn.ReasonSelected(Reason: "Order Error")
-            print("Second Action pressed")
+        let thirdAction: UIAlertAction = UIAlertAction(title: Strings.ReturnView.reasontitle3, style: .default) { action -> Void in
+            self.OrderToReturn.ReasonSelected(Reason: Strings.ReturnView.reasontitle3)
         }
-        let fourAction: UIAlertAction = UIAlertAction(title: "Other", style: .default) { action -> Void in
-            
-             self.OrderToReturn.ReasonSelected(Reason: "Other")
-            print("Second Action pressed")
+        let fourAction: UIAlertAction = UIAlertAction(title: Strings.ReturnView.reasontitle4, style: .default) { action -> Void in
+             self.OrderToReturn.ReasonSelected(Reason: Strings.ReturnView.reasontitle4)
         }
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+        let cancelAction: UIAlertAction = UIAlertAction(title: Language.Common.Cancel, style: .cancel) { action -> Void in }
         
         // add actions
         actionSheetController.addAction(firstAction)
         actionSheetController.addAction(secondAction)
-          actionSheetController.addAction(thirdAction)
-          actionSheetController.addAction(fourAction)
+        actionSheetController.addAction(thirdAction)
+        actionSheetController.addAction(fourAction)
         actionSheetController.addAction(cancelAction)
         
         
@@ -83,19 +78,19 @@ class OrderDetailVC: ParentViewController,UITableViewDelegate,UITableViewDataSou
         lbl_Date.text = orderDate
         switch PaymentStatus {
         case 0:
-            OrderStatus.text = "Pending"
+            OrderStatus.text = Strings.OrderType.Pending
             self.view.backgroundColor = YELLOW_COLOR
             break
         case 1:
-            OrderStatus.text = "Completed"
+            OrderStatus.text = Strings.OrderType.Completed
             self.view.backgroundColor = #colorLiteral(red: 0.1722471222, green: 0.6450943661, blue: 0.1563819906, alpha: 1)
             break
         case 2:
-            OrderStatus.text = "Cancelled"
+            OrderStatus.text = Strings.OrderType.Cancelled
             self.view.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
             break
         case 3:
-            OrderStatus.text = "Denied"
+            OrderStatus.text = Strings.OrderType.Denied
             self.view.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
 
             break

@@ -8,8 +8,11 @@
 
 import UIKit
 import JJFloatingActionButton
+import EasyLoadingShimmer
 
 class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource {
+
+    var listCellSize : CGFloat = 0.0
     var items = [Product]()
     var FilterData = [String]()
     var SelectedFilterData = [String]()
@@ -19,19 +22,25 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     @IBOutlet weak var ListView: UITableView!
     @IBOutlet weak var btn_chnages_view: UIButton!
     
-    var listCellSize : CGFloat = 0.0
      fileprivate let actionButton = JJFloatingActionButton()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        LoadingShimmer.startCovering(ListView, with: [Strings.Identifiers.ListTableCell])
+        EasyLoadingShimmer.startCovering(for: gridView, with: [Strings.Identifiers.HProductListCell])
+        EasyLoadingShimmer.startCovering(for: filterView, with: [Strings.Identifiers.FilterSliderCell])
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         gridView.delegate = self
         gridView.dataSource = self
         ListView.delegate = self
         ListView.dataSource = self
         filterView.delegate = self
         filterView.dataSource = self
-//        self.items = createItems()
-         items = ListProduct.init().DataLoad()
+        
+        items = ListProduct.init().DataLoad()
         FilterData = FilterSliderCell.filterItem
         SelectedFilterData = FilterSliderCell.SelectedItem
         
@@ -64,8 +73,7 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == filterView
-        {
+        if collectionView == filterView{
             return FilterData.count
         }else{
             return items.count
@@ -74,25 +82,19 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if collectionView == filterView{
               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.FilterSliderCell, for: indexPath) as! FilterSliderCell
             cell.filterName.text = "\(FilterData[indexPath.row]) :"
             cell.slectedFilter.text = SelectedFilterData[indexPath.row]
              return cell
-            
         }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.Identifiers.HProductListCell, for: indexPath) as! HProductListCell
             let Product = items[(indexPath as NSIndexPath).row]
-            //                print(Product)
             cell.img_product.image = UIImage(named: Product.imageName)
             cell.Actul_price.text = Product.actulPrice
             cell.old_price.attributedText = Product.oldPrice.strikeThrough()
             cell.name.text = Product.name
-            //        cell.product_rating.settings.updateOnTouch = false
-            //                cell.product_rating.rating = Product.productRating
-            
             return cell
         }
         
@@ -110,7 +112,6 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
             return CGSize(width: size, height: 270)
         }
         else{
-
             return CGSize(width: 0, height: 0)
         }
         
@@ -133,15 +134,11 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
         cell.Actul_price.changefontandsize(font: MediumFont, size: 18)
         cell.name.changefontandsize(font: BoldFont, size: 18)
         cell.old_price.changefontandsize(font: MediumFont, size: 18)
-        print(Product.productRating)
-//        cell.product_rating.rating = Product.productRating
-        
         return cell
     }
     
 
     @IBAction func onGridToListPressed(_ sender: Any) {
-
         if gridView.isHidden == false{
             gridView.isHidden = true
             ListView.isHidden = false

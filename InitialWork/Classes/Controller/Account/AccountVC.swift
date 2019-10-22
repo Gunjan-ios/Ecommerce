@@ -14,12 +14,17 @@ class AccountVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
     var fSectionitems = [AccountType]()
     var sSectionitems = [AccountType]()
     var tSectionitems = [AccountType]()
+
     @IBOutlet weak var headerView: UIView!
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
+
         AccountList.delegate = self
         AccountList.dataSource = self
-//        AccountList.tableHeaderView = headerView
+
+        //        AccountList.tableHeaderView = headerView
         self.fSectionitems =  Account().FristSectionDataLoad()
         self.sSectionitems =  Account().SecondSectionDataLoad()
         self.tSectionitems =  Account().ThirdSectionDataLoad()
@@ -71,37 +76,37 @@ class AccountVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
         tableView.deselectRow(at: indexPath, animated: true)
         switch [indexPath.section , indexPath.row ]{
         case [0,0]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"MyOrderVC") as! MyOrderVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.MyOrderVC) as! MyOrderVC
             self.navigationController?.pushViewController(view, animated: true)
             break
             case [0,1]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"OfferVC") as! OfferVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.OfferVC) as! OfferVC
             self.navigationController?.pushViewController(view, animated: true)
             break
         case [0,2]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"NotificationVC") as! NotificationVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.NotificationVC) as! NotificationVC
             self.navigationController?.pushViewController(view, animated: true)
             break
         case [0,3]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"AddressBookVC") as! AddressBookVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.AddressBookVC) as! AddressBookVC
             self.navigationController?.pushViewController(view, animated: true)
             break
         case [2,0]:
           DispatchQueue.main.async {
-            let alert = Utils.getAlertController(title: "Logout", message: "Are you sure want to logout?")
-            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+            let alert = Utils.getAlertController(title: Language.Common.Logout, message:Language.Common.LogOutMsg)
+            alert.addAction(UIAlertAction(title: Language.Common.No, style: .default, handler: { (action) in
             }))
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            alert.addAction(UIAlertAction(title: Language.Common.Yes, style: .default, handler: { (action) in
             }))
             self.present(alert, animated: true, completion: nil)
                     }
             break
         case [1,1]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"SettingVC") as! SettingVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier: Strings.Identifiers.SettingVC) as! SettingVC
             self.navigationController?.pushViewController(view, animated: true)
             break
         case [1,2]:
-            let view = self.storyboard?.instantiateViewController(withIdentifier:"FeedBackVC") as! FeedBackVC
+            let view = self.storyboard?.instantiateViewController(withIdentifier:Strings.Identifiers.FeedBackVC) as! FeedBackVC
             self.navigationController?.pushViewController(view, animated: true)
             break
         default:

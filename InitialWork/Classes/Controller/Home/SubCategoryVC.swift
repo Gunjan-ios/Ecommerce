@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate
-{
+class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate{
+    
     @IBOutlet weak var headerView: UIView!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,25 +36,18 @@ class SubCategoryVC: ParentViewController,UICollectionViewDelegate,UICollectionV
             return 75
         }
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return item.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return item.count
-//        if item[section].isexpand == true{
-//            return 2
-//        }else{
-//            return 1
-//        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         if item[indexPath.section].isexpand == true {
             item[indexPath.section].isexpand = false
             let sections = IndexSet.init(integer: indexPath.row)
             tableView.reloadSections(sections, with: .none)
-
         }else{
             item[indexPath.section].isexpand = true
         }

@@ -17,4 +17,5 @@ target 'InitialWork' do
 	pod 'JJFloatingActionButton'
 	pod 'GMStepper'
 	pod 'StepProgressView'
+	pod 'EasyLoadingShimmer'
 end

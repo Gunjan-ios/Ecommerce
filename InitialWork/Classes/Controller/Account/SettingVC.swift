@@ -9,7 +9,8 @@
 import UIKit
 
 class SettingVC: ParentViewController,UITableViewDelegate,UITableViewDataSource  {
-@IBOutlet weak var  SettingList: UITableView!
+    @IBOutlet weak var  SettingList: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         SettingList.dataSource = self
@@ -22,7 +23,6 @@ class SettingVC: ParentViewController,UITableViewDelegate,UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Strings.Identifiers.SettingCell) as! SettingCell
-        
         let order = SettingCell.settingData[indexPath.row]
        cell.Name.text = order.name
         cell.Swt_status.isOn = order.status

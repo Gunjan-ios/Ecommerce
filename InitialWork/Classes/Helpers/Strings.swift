@@ -33,28 +33,40 @@ class Strings {
         static let MyOrderCell  = "MyOrderCell"
         static let ProductDetailCell  = "ProductDetailCell"
         static let FilterSliderCell  = "FilterSliderCell"
-          static let FirstDetailCell  = "FirstDetailCell"
-         static let SecondCell  = "SecondCell"
-         static let ThirdCell  = "ThirdCell"
+        static let FirstDetailCell  = "FirstDetailCell"
+        static let SecondCell  = "SecondCell"
+        static let ThirdCell  = "ThirdCell"
         static let DescriptionCell  = "DescriptionCell"
         static let TitleSpecificaion  = "TitleSpecificaion"
-         static let ReviewCell  = "ReviewCell"
+        static let ReviewCell  = "ReviewCell"
         static let SubCatCell  = "SubCatCell"
-         static let HeaderCell  = "HeaderCell"
+        static let HeaderCell  = "HeaderCell"
         static let OfferCell  = "OfferCell"
- static let SettingCell  = "SettingCell"
-         static let EmojiCell  = "EmojiCell"
-          static let EmojiCell1  = "EmojiCell1"
-          static let EmojiCell2  = "EmojiCell2"
+        static let SettingCell  = "SettingCell"
+        static let EmojiCell  = "EmojiCell"
+        static let EmojiCell1  = "EmojiCell1"
+        static let EmojiCell2  = "EmojiCell2"
+       static let ReturnView  = "ReturnView"
+        static let OrderDetailVC  = "OrderDetailVC"
         
+        static let AddressBookVC  = "AddressBookVC"
+        static let MyOrderVC  = "MyOrderVC"
+        static let OfferVC  = "OfferVC"
+        static let NotificationVC  = "NotificationVC"
+        static let SettingVC  = "SettingVC"
+        static let FeedBackVC  = "FeedBackVC"
+
         
     }
     struct Segue {
         static let   optToHome = "optToHome"
-//        static let HomeVC  = "HomeVC"
-//        static let HomeCell  = "HomeCell"
-//        static let ResetPasswordVC  = "ResetPasswordVC"
-        
+//        static let AddressBookVC  = "AddressBookVC"
+//        static let MyOrderVC  = "MyOrderVC"
+//        static let OfferVC  = "OfferVC"
+//        static let NotificationVC  = "NotificationVC"
+//        static let SettingVC  = "SettingVC"
+//        static let FeedBackVC  = "FeedBackVC"
+
     }
   
     struct Common {
@@ -67,6 +79,21 @@ class Strings {
         static let NoData = "Data not Found."
         static let Internet = "Check your internet connection."
         static let FetchData = "Fetching data..."
+        
+    }
+    struct ReturnView {
+      static let reasonlabel =   "Select Reason For Return Item"
+        static let reasontitle1 =  "Dead On Arrival"
+         static let reasontitle2 =  "Faulty,Please supply details"
+         static let reasontitle3 =  "Order Error"
+         static let reasontitle4 =  "Other"
+    }
+    
+    struct OrderType {
+        static let Pending = "Pending"
+        static let Completed = "Completed"
+        static let Cancelled = "Cancelled"
+        static let Denied = "Denied"
     }
     struct Login {
         static let invalidName = "Please enter a valid name."
