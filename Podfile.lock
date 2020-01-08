@@ -35,7 +35,7 @@ DEPENDENCIES:
   - UPCarouselFlowLayout
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Cosmos
     - EasyLoadingShimmer
@@ -83,4 +83,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 8f17e506e7c50697a5138d14d6b7629a2ea39c7d
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4

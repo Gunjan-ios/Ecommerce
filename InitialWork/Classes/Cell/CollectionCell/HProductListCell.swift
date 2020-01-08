@@ -35,10 +35,7 @@ class HProductListCell: UICollectionViewCell {
         layer.masksToBounds = false
 //        layer.shadowPath = UIBezierPath(roundedRect:bounds, cornerRadius:layer.cornerRadius).cgPath
         DetailsView.layer.cornerRadius = layer.cornerRadius
-
     }
-    
-    
 }
 
 

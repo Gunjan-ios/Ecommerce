@@ -12,7 +12,6 @@
 		2E0DA0432227C61500AA9B7C /* LanguageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */; };
 		2E0E75C22223FA9100DAD984 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E75C12223FA9100DAD984 /* Reach.swift */; };
 		2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EE9F9227473050066009C /* UIView_Borders.swift */; };
-		2E13E543234DB9660036E2E4 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13E542234DB9660036E2E4 /* OfferVC.swift */; };
 		2E13E545234DBDD50036E2E4 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13E544234DBDD50036E2E4 /* OfferCell.swift */; };
 		2E13E547234DE5BE0036E2E4 /* AddressBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13E546234DE5BE0036E2E4 /* AddressBookVC.swift */; };
 		2E13E549234DE9D20036E2E4 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13E548234DE9D20036E2E4 /* NotificationVC.swift */; };
@@ -71,7 +70,6 @@
 		2EC1B4AD233B69A200708B51 /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B4AC233B69A200708B51 /* OrderDetailVC.swift */; };
 		2EC1B4AF233B6C6700708B51 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B4AE233B6C6700708B51 /* ProductDetailCell.swift */; };
 		2EC1B4B1233B8A5C00708B51 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B4B0233B8A5C00708B51 /* FilterVC.swift */; };
-		2EC43E442347275300DB8E07 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC43E432347275300DB8E07 /* ReviewVC.swift */; };
 		2EC43E46234729EA00DB8E07 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC43E45234729EA00DB8E07 /* ReviewCell.swift */; };
 		2EC43E4823475AE900DB8E07 /* SubCatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC43E4723475AE900DB8E07 /* SubCatCell.swift */; };
 		2EC43E4A23476A4100DB8E07 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC43E4923476A4100DB8E07 /* HeaderCell.swift */; };
@@ -95,6 +93,7 @@
 		2EFEB86D2334D73F0031E0AE /* PaymentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB86C2334D73F0031E0AE /* PaymentTypeCell.swift */; };
 		2EFEB8702334F5880031E0AE /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB86F2334F5880031E0AE /* AccountVC.swift */; };
 		2EFEB8722334F65F0031E0AE /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB8712334F65F0031E0AE /* AccountCell.swift */; };
+		539D40E323C5DFD5006AA685 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D40E223C5DFD5006AA685 /* OfferVC.swift */; };
 		91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +123,6 @@
 		2E0DA0422227C61500AA9B7C /* LanguageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStrings.swift; sourceTree = "<group>"; };
 		2E0E75C12223FA9100DAD984 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		2E0EE9F9227473050066009C /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
-		2E13E542234DB9660036E2E4 /* OfferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
 		2E13E544234DBDD50036E2E4 /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		2E13E546234DE5BE0036E2E4 /* AddressBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookVC.swift; sourceTree = "<group>"; };
 		2E13E548234DE9D20036E2E4 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 		2EC1B4AE233B6C6700708B51 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
 		2EC1B4B0233B8A5C00708B51 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2EC2766A2220327600148E71 /* InitialWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InitialWork.entitlements; sourceTree = "<group>"; };
-		2EC43E432347275300DB8E07 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		2EC43E45234729EA00DB8E07 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		2EC43E4723475AE900DB8E07 /* SubCatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCatCell.swift; sourceTree = "<group>"; };
 		2EC43E4923476A4100DB8E07 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
@@ -215,6 +212,7 @@
 		2EFEB86C2334D73F0031E0AE /* PaymentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeCell.swift; sourceTree = "<group>"; };
 		2EFEB86F2334F5880031E0AE /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		2EFEB8712334F65F0031E0AE /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		539D40E223C5DFD5006AA685 /* OfferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
 		B62D4C2C63A3B8A25F781AB7 /* Pods-InitialWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FA7A177697FE46A313AB33 /* Pods-InitialWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.release.xcconfig"; sourceTree = "<group>"; };
 		D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InitialWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -562,9 +560,8 @@
 				2EFEB86F2334F5880031E0AE /* AccountVC.swift */,
 				2EB034AC233A2A70004A308F /* MyOrderVC.swift */,
 				2EC1B4AC233B69A200708B51 /* OrderDetailVC.swift */,
-				2EC43E432347275300DB8E07 /* ReviewVC.swift */,
+				539D40E223C5DFD5006AA685 /* OfferVC.swift */,
 				2E13E546234DE5BE0036E2E4 /* AddressBookVC.swift */,
-				2E13E542234DB9660036E2E4 /* OfferVC.swift */,
 				2E13E548234DE9D20036E2E4 /* NotificationVC.swift */,
 				2E13E54D234DFE510036E2E4 /* SettingVC.swift */,
 				2E13E54A234DEEFC0036E2E4 /* AddAddressVC.swift */,
@@ -812,7 +809,6 @@
 				2EFEB8722334F65F0031E0AE /* AccountCell.swift in Sources */,
 				2EB07D3A221BEC6D00242F2D /* UserData.swift in Sources */,
 				2ECD7596233CCAC40047029C /* FilterSliderCell.swift in Sources */,
-				2EC43E442347275300DB8E07 /* ReviewVC.swift in Sources */,
 				2EB07D40221BEC6D00242F2D /* Gasstation.swift in Sources */,
 				2EA186D0231F91B300871AE3 /* OTPvc.swift in Sources */,
 				2EB07D18221BEBC200242F2D /* AppDelegate.swift in Sources */,
@@ -846,6 +842,7 @@
 				2EC43E4A23476A4100DB8E07 /* HeaderCell.swift in Sources */,
 				2EEC64E1231E9C3B00055545 /* LoginVC.swift in Sources */,
 				2E13E54E234DFE510036E2E4 /* SettingVC.swift in Sources */,
+				539D40E323C5DFD5006AA685 /* OfferVC.swift in Sources */,
 				2E0EE9FA227473050066009C /* UIView_Borders.swift in Sources */,
 				2EC43E46234729EA00DB8E07 /* ReviewCell.swift in Sources */,
 				2E13E545234DBDD50036E2E4 /* OfferCell.swift in Sources */,
@@ -853,7 +850,6 @@
 				2E6FBE6923436E2900055E2E /* ProImageCell.swift in Sources */,
 				2E9708972320DECC0022D55B /* Character.swift in Sources */,
 				2EBE25EF2354871C00E07B26 /* FeedBackVC.swift in Sources */,
-				2E13E543234DB9660036E2E4 /* OfferVC.swift in Sources */,
 				2ECD7598233CEB0B0047029C /* TrackingVC.swift in Sources */,
 				2EEC64E0231E9C3B00055545 /* RegisterVC.swift in Sources */,
 				2EB034AD233A2A70004A308F /* MyOrderVC.swift in Sources */,
@@ -1048,7 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
+				DEVELOPMENT_TEAM = YA4536WK7P;
 				INFOPLIST_FILE = InitialWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1068,7 +1064,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T2N5GRW3Z;
+				DEVELOPMENT_TEAM = YA4536WK7P;
 				INFOPLIST_FILE = InitialWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (

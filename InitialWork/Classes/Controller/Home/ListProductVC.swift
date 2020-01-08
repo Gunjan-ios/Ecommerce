@@ -8,7 +8,7 @@
 
 import UIKit
 import JJFloatingActionButton
-import EasyLoadingShimmer
+//import EasyLoadingShimmer
 
 class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource {
 
@@ -27,8 +27,8 @@ class ListProductVC: ParentViewController,UICollectionViewDelegate,UICollectionV
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        LoadingShimmer.startCovering(ListView, with: [Strings.Identifiers.ListTableCell])
-        EasyLoadingShimmer.startCovering(for: gridView, with: [Strings.Identifiers.HProductListCell])
-        EasyLoadingShimmer.startCovering(for: filterView, with: [Strings.Identifiers.FilterSliderCell])
+//        EasyLoadingShimmer.startCovering(for: gridView, with: [Strings.Identifiers.HProductListCell])
+//        EasyLoadingShimmer.startCovering(for: filterView, with: [Strings.Identifiers.FilterSliderCell])
     }
     override func viewDidLoad() {
         super.viewDidLoad()

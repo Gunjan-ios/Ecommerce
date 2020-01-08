@@ -178,9 +178,7 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
 //            cell.btn_cart.setTitle(Product.cartData, for: .normal)
             return cell
         }
-       
-
-     
+    
     }
 
     /*
