@@ -93,6 +93,7 @@
 		2EFEB86D2334D73F0031E0AE /* PaymentTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB86C2334D73F0031E0AE /* PaymentTypeCell.swift */; };
 		2EFEB8702334F5880031E0AE /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB86F2334F5880031E0AE /* AccountVC.swift */; };
 		2EFEB8722334F65F0031E0AE /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB8712334F65F0031E0AE /* AccountCell.swift */; };
+		5331B63023DEFB0D00CE05EF /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5331B62F23DEFB0C00CE05EF /* ReviewVC.swift */; };
 		539D40E323C5DFD5006AA685 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D40E223C5DFD5006AA685 /* OfferVC.swift */; };
 		91667AB156DC87B648B7A0A5 /* Pods_InitialWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40F64353B3509F81F3CDA1C /* Pods_InitialWork.framework */; };
 /* End PBXBuildFile section */
@@ -212,6 +213,7 @@
 		2EFEB86C2334D73F0031E0AE /* PaymentTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeCell.swift; sourceTree = "<group>"; };
 		2EFEB86F2334F5880031E0AE /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		2EFEB8712334F65F0031E0AE /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		5331B62F23DEFB0C00CE05EF /* ReviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		539D40E223C5DFD5006AA685 /* OfferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
 		B62D4C2C63A3B8A25F781AB7 /* Pods-InitialWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FA7A177697FE46A313AB33 /* Pods-InitialWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InitialWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-InitialWork/Pods-InitialWork.release.xcconfig"; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				2EB034AC233A2A70004A308F /* MyOrderVC.swift */,
 				2EC1B4AC233B69A200708B51 /* OrderDetailVC.swift */,
 				539D40E223C5DFD5006AA685 /* OfferVC.swift */,
+				5331B62F23DEFB0C00CE05EF /* ReviewVC.swift */,
 				2E13E546234DE5BE0036E2E4 /* AddressBookVC.swift */,
 				2E13E548234DE9D20036E2E4 /* NotificationVC.swift */,
 				2E13E54D234DFE510036E2E4 /* SettingVC.swift */,
@@ -788,6 +791,7 @@
 				2EEC64E3231E9C5500055545 /* ResetPasswordVC.swift in Sources */,
 				2E86B08D2328D11600569EB9 /* MyTabContoller.swift in Sources */,
 				2EB07D39221BEC6D00242F2D /* RoundedView.swift in Sources */,
+				5331B63023DEFB0D00CE05EF /* ReviewVC.swift in Sources */,
 				2EC43E4823475AE900DB8E07 /* SubCatCell.swift in Sources */,
 				2EC1B4AD233B69A200708B51 /* OrderDetailVC.swift in Sources */,
 				2ECC2B27232B93B5004C9C19 /* FlashCell.swift in Sources */,

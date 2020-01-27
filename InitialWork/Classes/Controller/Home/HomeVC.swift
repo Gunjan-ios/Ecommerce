@@ -9,6 +9,7 @@
 import UIKit
 import UPCarouselFlowLayout
 
+
 class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
     
      let Banner = [#imageLiteral(resourceName: "baner4"),#imageLiteral(resourceName: "baner1"),#imageLiteral(resourceName: "baner3"),#imageLiteral(resourceName: "baner2")]
@@ -17,6 +18,14 @@ class HomeVC: ParentViewController,UICollectionViewDelegate,UICollectionViewData
      var items = [Product]()
      var list_category = [Category]()
 
+//    var ui : UILabel!
+//    var s :UIView!
+//    var s : UIButton!
+//    var s :UIView!
+//    var s :UIView!
+//    var s :UIView!
+//    var s :UIView!
+    
     @IBOutlet weak var banner_collection: UICollectionView!
     @IBOutlet weak var newArrivalCollection: UICollectionView!
     @IBOutlet weak var categoryCollection: UICollectionView!
